@@ -172,6 +172,10 @@ section > p {
     padding-right: calc((100% - 1090px) / 2);
 }
 
+#about p {
+    margin-bottom: 18px;
+    max-width: 900px;
+}
 
 /* EXPERTISE CARDS */
 
