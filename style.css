@@ -142,21 +142,24 @@ section > p {
     transition: 0.2s ease;
 }
 
-.buttons a:first-child {
+.btn-primary {
     background: #172554;
     color: white;
-}
-
-.buttons a:first-child:hover {
-    background: #2563eb;
-}
-
-.buttons a:last-child {
     border: 2px solid #172554;
-    color: #172554;
 }
 
-.buttons a:last-child:hover {
+.btn-primary:hover {
+    background: #2563eb;
+    border-color: #2563eb;
+}
+
+.btn-secondary {
+    background: white;
+    color: #172554;
+    border: 2px solid #172554;
+}
+
+.btn-secondary:hover {
     background: #172554;
     color: white;
 }
