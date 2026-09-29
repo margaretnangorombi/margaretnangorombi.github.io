@@ -125,7 +125,22 @@ section > p {
     color: #64748b;
 }
 
+.hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 25px;
+}
 
+.hero-tags span {
+    background: #f1f5f9;
+    color: #172554;
+    border: 1px solid #dbe3ec;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
 /* BUTTONS */
 
 .buttons {
