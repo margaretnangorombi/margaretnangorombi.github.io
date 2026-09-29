@@ -1,0 +1,162 @@
+index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Margaret Nangorombi | Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <h2>Margaret Nangorombi</h2>
+
+            <div>
+                <a href="#about">About</a>
+                <a href="#expertise">Expertise</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero">
+
+            <p class="intro">Hello, I'm</p>
+
+            <h1>Margaret Nangorombi Mwangi</h1>
+
+            <h2>
+                Research | Monitoring & Evaluation | Data Analysis |
+                Project Coordination | Evidence & Insights
+            </h2>
+
+            <p>
+                I turn research and data into clear insights that support
+                learning, improvement and better decision-making.
+            </p>
+
+            <div class="buttons">
+                <a href="#projects">View My Work</a>
+                <a href="#contact">Contact Me</a>
+            </div>
+
+        </section>
+
+
+        <section id="about">
+
+            <h2>About Me</h2>
+
+            <p>
+                I am a research, monitoring and evaluation, and data
+                professional with experience supporting research,
+                programme evaluation, data quality, digital data
+                collection, analysis, reporting and evidence generation.
+            </p>
+
+        </section>
+
+
+        <section id="expertise">
+
+            <h2>Areas of Expertise</h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <h3>Research</h3>
+                    <p>
+                        Quantitative and qualitative research, survey design,
+                        FGDs, KIIs and research coordination.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Monitoring & Evaluation</h3>
+                    <p>
+                        Programme monitoring, evaluations, indicator tracking,
+                        data quality and learning.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Data & Analytics</h3>
+                    <p>
+                        Data cleaning, analysis, visualization, dashboards
+                        and insight generation.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Project Coordination</h3>
+                    <p>
+                        Fieldwork coordination, team supervision,
+                        quality assurance and stakeholder engagement.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section id="experience">
+
+            <h2>Professional Experience</h2>
+
+            <p>
+                My professional experience spans research, monitoring and
+                evaluation, data management, field coordination and
+                evidence-based reporting.
+            </p>
+
+        </section>
+
+
+        <section id="projects">
+
+            <h2>Selected Work</h2>
+
+            <p>
+                Selected research, evaluation, data and learning projects
+                will be showcased here.
+            </p>
+
+        </section>
+
+
+        <section id="contact">
+
+            <h2>Let's Connect</h2>
+
+            <p>
+                Interested in research, data, monitoring and evaluation,
+                or project collaboration?
+            </p>
+
+            <a href="mailto:mwangimargaret034@gmail.com">
+                Email Me
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>
+            © 2026 Margaret Nangorombi Mwangi
+        </p>
+    </footer>
+
+</body>
+</html>
