@@ -125,22 +125,6 @@ section > p {
     color: #64748b;
 }
 
-.hero-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 25px;
-}
-
-.hero-tags span {
-    background: #f1f5f9;
-    color: #172554;
-    border: 1px solid #dbe3ec;
-    padding: 8px 14px;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    font-weight: 600;
-}
 /* BUTTONS */
 
 .buttons {
@@ -317,6 +301,8 @@ footer {
 
 /* HERO SKILL TAGS */
 
+/* HERO SKILL TAGS */
+
 .hero-tags {
     display: flex;
     flex-wrap: wrap;
@@ -326,12 +312,14 @@ footer {
 }
 
 .hero-tags span {
-    display: inline-block;
-    background: #f1f5f9;
+    display: inline-flex;
+    align-items: center;
+    background-color: #f1f5f9;
     color: #172554;
-    border: 1px solid #dbe3ec;
-    padding: 8px 15px;
-    border-radius: 50px;
+    border: 1px solid #cbd5e1;
+    padding: 7px 14px;
+    border-radius: 999px;
     font-size: 0.9rem;
     font-weight: 600;
+    line-height: 1.4;
 }
