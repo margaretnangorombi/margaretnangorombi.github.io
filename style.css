@@ -314,3 +314,24 @@ footer {
         padding-right: 30px;
     }
 }
+
+/* HERO SKILL TAGS */
+
+.hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+    margin-bottom: 5px;
+}
+
+.hero-tags span {
+    display: inline-block;
+    background: #f1f5f9;
+    color: #172554;
+    border: 1px solid #dbe3ec;
+    padding: 8px 15px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
