@@ -36,10 +36,10 @@ header {
     z-index: 1000;
 }
 
-nav {
+   nav {
     max-width: 1150px;
     margin: auto;
-    padding: 20px 30px;
+    padding: 18px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -48,20 +48,22 @@ nav {
 
 nav h2 {
     color: #172554;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     white-space: nowrap;
 }
 
 nav div {
     display: flex;
-    gap: 24px;
+    gap: 18px;
     align-items: center;
+    flex-wrap: nowrap;
 }
 
 nav a {
     color: #374151;
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    white-space: nowrap;
 }
 
 nav a:hover {
@@ -361,6 +363,18 @@ footer {
    TABLET / MOBILE
    ================================ */
 
+@media (max-width: 1000px) {
+
+    nav {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    nav div {
+        flex-wrap: wrap;
+        gap: 12px 18px;
+    }
+}
 @media (max-width: 650px) {
 
     nav {
