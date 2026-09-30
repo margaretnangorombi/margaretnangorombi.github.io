@@ -158,7 +158,6 @@ section > p {
     line-height: 1.4;
 }
 
-
 /* ================================
    HERO BUTTONS
    ================================ */
@@ -361,7 +360,7 @@ footer {
    TABLET / MOBILE
    ================================ */
 
-@media (max-width: 768px) {
+@media (max-width: 650px) {
 
     nav {
         flex-direction: column;
