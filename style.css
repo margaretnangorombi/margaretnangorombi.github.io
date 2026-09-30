@@ -276,39 +276,50 @@ section > p {
 
 /* FOOTER */
 
+/* FOOTER */
+
 footer {
     background: #0f172a;
     color: #cbd5e1;
-    text-align: center;
-    padding: 30px;
+    padding: 28px 30px;
+}
+
+.footer-content {
+    max-width: 1150px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-content p {
     font-size: 0.9rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: #cbd5e1;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
 }
 
 
 /* MOBILE */
 
-.buttons {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-    width: 100%;
-}
+/* MOBILE */
 
-.buttons a {
-    width: 100%;
-    text-align: center;
-    padding: 12px 10px;
-    font-size: 0.9rem;
-}
-@media (max-width: 480px) {
-    .buttons {
-        grid-template-columns: 1fr;
-    }
-{
+@media (max-width: 768px) {
 
-   .contact-links {
-    grid-template-columns: 1fr;
-}
     nav {
         flex-direction: column;
         gap: 15px;
@@ -322,16 +333,20 @@ footer {
 
     .hero {
         min-height: auto;
-        padding-top: 100px;
-        padding-bottom: 100px;
+        padding-top: 80px;
+        padding-bottom: 80px;
     }
 
     .hero h1 {
-    font-size: 3.4rem;
+        font-size: 2.5rem;
     }
 
     .hero h2 {
         font-size: 1.1rem;
+    }
+
+    .hero-tags {
+        gap: 8px;
     }
 
     .cards {
@@ -339,12 +354,21 @@ footer {
     }
 
     .buttons {
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
         width: 100%;
     }
 
     .buttons a {
+        width: 100%;
         text-align: center;
+        padding: 12px 10px;
+        font-size: 0.9rem;
+    }
+
+    .contact-links {
+        grid-template-columns: 1fr;
     }
 
     #about,
@@ -352,9 +376,43 @@ footer {
         padding-left: 30px;
         padding-right: 30px;
     }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        justify-content: center;
+    }
 }
 
-/* HERO SKILL TAGS */
+
+@media (max-width: 480px) {
+
+    section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.15rem;
+    }
+
+    .hero h2 {
+        font-size: 1rem;
+    }
+
+    .buttons {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-tags span {
+        font-size: 0.82rem;
+        padding: 6px 11px;
+    }
+}
+
 
 /* HERO SKILL TAGS */
 
