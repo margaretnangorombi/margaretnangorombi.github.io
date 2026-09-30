@@ -269,6 +269,29 @@ section > p {
     padding-right: max(30px, calc((100% - 1090px) / 2));
 }
 
+/* ================================
+   SECTION SEPARATION
+   ================================ */
+
+#projects {
+    border-top: 1px solid #eef2f7;
+}
+
+#tools {
+    background: #f8fafc;
+    max-width: 100%;
+    padding-left: max(30px, calc((100% - 1090px) / 2));
+    padding-right: max(30px, calc((100% - 1090px) / 2));
+}
+
+#achievements {
+    border-top: 1px solid #eef2f7;
+}
+
+#contact {
+    background: #f8fafc;
+    max-width: 100%;
+}
 
 /* ================================
    CONTACT
@@ -481,9 +504,10 @@ footer {
         padding: 6px 11px;
     }
 
-    #about,
-    #experience {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
+   #about,
+   #experience,
+   #tools {
+    padding-left: 30px;
+    padding-right: 30px;
+}
 }
