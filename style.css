@@ -516,6 +516,90 @@ a:focus-visible {
    ================================ */
 
 @media (max-width: 480px) {
+   /* MOBILE FINAL POLISH */
+
+nav {
+    padding: 14px 20px;
+}
+
+nav h2 {
+    font-size: 1.05rem;
+}
+
+nav div {
+    gap: 10px 14px;
+}
+
+nav a {
+    font-size: 0.82rem;
+}
+
+.hero {
+    padding-top: 50px;
+    padding-bottom: 60px;
+}
+
+.hero .intro {
+    font-size: 0.9rem;
+}
+
+.hero h1 {
+    font-size: 2.15rem;
+    line-height: 1.12;
+}
+
+.hero h2 {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.hero > p:not(.intro) {
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.hero-tags {
+    gap: 8px;
+}
+
+.hero-tags span {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+}
+
+.buttons {
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.buttons a {
+    min-width: 0;
+    width: 100%;
+}
+
+.card {
+    padding: 22px;
+}
+
+.card h3 {
+    font-size: 1.1rem;
+}
+
+.contact-links a {
+    padding: 20px;
+}
+
+.contact-links span {
+    overflow-wrap: anywhere;
+}
+
+section > h2 {
+    font-size: 1.7rem;
+}
+
+.footer-links {
+    gap: 12px;
+}
 
     section {
         padding: 70px 20px;
