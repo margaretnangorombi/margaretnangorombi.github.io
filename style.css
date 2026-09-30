@@ -1,5 +1,6 @@
 /* ================================
    Margaret Nangorombi Portfolio
+   CLEAN PREMIUM VERSION
    ================================ */
 
 * {
@@ -23,20 +24,20 @@ a {
     text-decoration: none;
 }
 
-
 /* ================================
    NAVIGATION
    ================================ */
 
 header {
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.96);
     border-bottom: 1px solid #e5e7eb;
     position: sticky;
     top: 0;
     z-index: 1000;
+    backdrop-filter: blur(10px);
 }
 
-   nav {
+nav {
     max-width: 1150px;
     margin: auto;
     padding: 18px 30px;
@@ -64,20 +65,18 @@ nav a {
     font-weight: 600;
     font-size: 0.9rem;
     white-space: nowrap;
+    transition: color 0.2s ease;
 }
 
-nav a:hover {
-    color: #2563eb;
-}
-
+nav a:hover,
 nav a.active {
     color: #2563eb;
 }
 
 nav a.active {
-    color: #2563eb;
     font-weight: 700;
 }
+
 /* ================================
    GENERAL SECTIONS
    ================================ */
@@ -86,6 +85,7 @@ section {
     max-width: 1150px;
     margin: auto;
     padding: 90px 30px;
+    scroll-margin-top: 100px;
 }
 
 section > h2 {
@@ -100,9 +100,7 @@ section > p {
     color: #4b5563;
 }
 
-/* ================================
-   SECTION HEADING ACCENTS
-   ================================ */
+/* SECTION HEADING ACCENTS */
 
 section:not(.hero) > h2 {
     position: relative;
@@ -134,7 +132,7 @@ section:not(.hero) > h2::before {
 
 .hero-grid {
     display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
+    grid-template-columns: minmax(0, 1.2fr) minmax(330px, 0.8fr);
     gap: 70px;
     align-items: center;
     min-height: 65vh;
@@ -177,8 +175,6 @@ section:not(.hero) > h2::before {
     color: #64748b;
 }
 
-
-
 /* HERO TAGS */
 
 .hero-tags {
@@ -199,7 +195,6 @@ section:not(.hero) > h2::before {
     font-size: 0.84rem;
     font-weight: 600;
 }
-
 
 /* HERO BUTTONS */
 
@@ -253,6 +248,7 @@ section:not(.hero) > h2::before {
 
 .hero-visual {
     position: relative;
+    min-width: 0;
 }
 
 .hero-visual::before {
@@ -291,6 +287,7 @@ section:not(.hero) > h2::before {
 }
 
 .evidence-card h3 {
+    color: #ffffff;
     font-size: 1.8rem;
     line-height: 1.3;
     margin-bottom: 30px;
@@ -315,8 +312,8 @@ section:not(.hero) > h2::before {
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.12);
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     color: #bfdbfe;
     font-size: 0.75rem;
     font-weight: 700;
@@ -324,8 +321,9 @@ section:not(.hero) > h2::before {
 
 .workflow-item strong {
     display: block;
+    color: #ffffff;
     font-size: 1rem;
-    margin-bottom: 2px;
+    margin-bottom: 3px;
 }
 
 .workflow-item p {
@@ -347,12 +345,12 @@ section:not(.hero) > h2::before {
     max-width: 1140px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     border: 1px solid #e2e8f0;
     border-radius: 18px;
     background: #ffffff;
     overflow: hidden;
-    box-shadow: 0 10px 35px rgba(15, 23, 42, 0.05);
+    box-shadow: 0 10px 35px rgba(15, 23, 42, 0.06);
 }
 
 .impact-item {
@@ -370,7 +368,7 @@ section:not(.hero) > h2::before {
     color: #172554;
     font-size: 1.8rem;
     font-weight: 800;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
 }
 
 .impact-item span {
@@ -379,74 +377,6 @@ section:not(.hero) > h2::before {
     font-size: 0.88rem;
     font-weight: 500;
 }
-/* HERO SKILL TAGS */
-
-.hero-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 24px;
-    margin-bottom: 5px;
-}
-
-.hero-tags span {
-    display: inline-flex;
-    align-items: center;
-    background-color: #f1f5f9;
-    color: #172554;
-    border: 1px solid #cbd5e1;
-    padding: 7px 14px;
-    border-radius: 999px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    line-height: 1.4;
-}
-
-/* ================================
-   HERO BUTTONS
-   ================================ */
-
-.buttons {
-    margin-top: 35px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
-.buttons a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 13px 25px;
-    border-radius: 6px;
-    font-weight: 700;
-    transition: 0.2s ease;
-    white-space: nowrap;
-    min-width: 180px;
-}
-
-.btn-primary {
-    background: #172554;
-    color: #ffffff;
-    border: 2px solid #172554;
-}
-
-.btn-primary:hover {
-    background: #2563eb;
-    border-color: #2563eb;
-}
-
-.btn-secondary {
-    background: #ffffff;
-    color: #172554;
-    border: 2px solid #172554;
-}
-
-.btn-secondary:hover {
-    background: #172554;
-    color: #ffffff;
-}
-
 
 /* ================================
    ABOUT
@@ -463,7 +393,6 @@ section:not(.hero) > h2::before {
     margin-bottom: 18px;
     max-width: 900px;
 }
-
 
 /* ================================
    CARDS
@@ -498,7 +427,6 @@ section:not(.hero) > h2::before {
 .card p {
     color: #64748b;
 }
-
 
 /* ================================
    EXPERIENCE
@@ -548,6 +476,11 @@ section:not(.hero) > h2::before {
     max-width: 700px;
 }
 
+#contact > h2::before {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .contact-links {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -583,10 +516,6 @@ section:not(.hero) > h2::before {
     font-size: 0.95rem;
 }
 
-#contact > h2::before {
-    left: 50%;
-    transform: translateX(-50%);
-}
 /* ================================
    FOOTER
    ================================ */
@@ -641,61 +570,12 @@ a:focus-visible {
     outline: 3px solid #2563eb;
     outline-offset: 4px;
 }
+
 /* ================================
-   TABLET / MOBILE
+   SMALL LAPTOP / TABLET NAVIGATION
    ================================ */
 
-@media (max-width: 1000px) {.hero {
-    padding-top: 45px;
-}
-
-.hero h1 {
-    font-size: 2.35rem;
-}
-
-.hero h2 {
-    font-size: 1.05rem;
-}
-
-.hero-grid {
-    gap: 35px;
-}
-
-.evidence-card {
-    padding: 25px 22px;
-    border-radius: 18px;
-}
-
-.evidence-card h3 {
-    font-size: 1.45rem;
-}
-
-.buttons {
-    grid-template-columns: 1fr;
-}
-
-.buttons a {
-    width: 100%;
-}
-
-.impact-strip {
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-.impact-grid {
-    grid-template-columns: 1fr;
-}
-
-.impact-item {
-    border-right: none;
-    border-bottom: 1px solid #e2e8f0;
-}
-
-.impact-item:last-child {
-    border-bottom: none;
-}
-
+@media (max-width: 1000px) {
     nav {
         align-items: flex-start;
         flex-direction: column;
@@ -706,35 +586,62 @@ a:focus-visible {
         gap: 12px 18px;
     }
 }
-@media (max-width: 650px) {
 
+/* ================================
+   TABLET / MOBILE
+   ================================ */
+
+@media (max-width: 768px) {
     nav {
-        flex-direction: column;
         gap: 15px;
     }
 
     nav div {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
+        justify-content: flex-start;
+        gap: 12px 15px;
     }
 
     .hero {
         min-height: auto;
-        padding-top: 80px;
-        padding-bottom: 80px;
+        padding-top: 65px;
+        padding-bottom: 60px;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+        min-height: auto;
     }
 
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2.7rem;
+        letter-spacing: -1px;
     }
 
     .hero h2 {
         font-size: 1.1rem;
     }
 
-    .hero-tags {
-        gap: 8px;
+    .hero-visual {
+        max-width: 600px;
+        width: 100%;
+    }
+
+    .evidence-card {
+        padding: 30px;
+    }
+
+    .impact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .impact-item:nth-child(2) {
+        border-right: none;
+    }
+
+    .impact-item:nth-child(1),
+    .impact-item:nth-child(2) {
+        border-bottom: 1px solid #e2e8f0;
     }
 
     .cards {
@@ -750,8 +657,8 @@ a:focus-visible {
 
     .buttons a {
         width: 100%;
+        min-width: 0;
         padding: 12px 10px;
-        font-size: 0.9rem;
         text-align: center;
     }
 
@@ -760,7 +667,8 @@ a:focus-visible {
     }
 
     #about,
-    #experience {
+    #experience,
+    #tools {
         padding-left: 30px;
         padding-right: 30px;
     }
@@ -775,185 +683,138 @@ a:focus-visible {
     }
 }
 
-
 /* ================================
    SMALL PHONES
    ================================ */
 
-@media (max-width: 480px) {.hero {
-    padding-top: 45px;
-}
-
-.hero h1 {
-    font-size: 2.35rem;
-}
-
-.hero h2 {
-    font-size: 1.05rem;
-}
-
-.hero-grid {
-    gap: 35px;
-}
-
-.evidence-card {
-    padding: 25px 22px;
-    border-radius: 18px;
-}
-
-.evidence-card h3 {
-    font-size: 1.45rem;
-}
-
-.buttons {
-    grid-template-columns: 1fr;
-}
-
-.buttons a {
-    width: 100%;
-}
-
-.impact-strip {
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-.impact-grid {
-    grid-template-columns: 1fr;
-}
-
-.impact-item {
-    border-right: none;
-    border-bottom: 1px solid #e2e8f0;
-}
-
-.impact-item:last-child {
-    border-bottom: none;
-}
-   /* MOBILE FINAL POLISH */
-
-nav {
-    padding: 14px 20px;
-}
-
-nav h2 {
-    font-size: 1.05rem;
-}
-
-nav div {
-    gap: 10px 14px;
-}
-
-nav a {
-    font-size: 0.82rem;
-}
-
-.hero {
-    padding-top: 50px;
-    padding-bottom: 60px;
-}
-
-.hero .intro {
-    font-size: 0.9rem;
-}
-
-.hero h1 {
-    font-size: 2.15rem;
-    line-height: 1.12;
-}
-
-.hero h2 {
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
-.hero > p:not(.intro) {
-    font-size: 1rem;
-    line-height: 1.7;
-}
-
-.hero-tags {
-    gap: 8px;
-}
-
-.hero-tags span {
-    font-size: 0.8rem;
-    padding: 6px 10px;
-}
-
-.buttons {
-    grid-template-columns: 1fr;
-    gap: 10px;
-}
-
-.buttons a {
-    min-width: 0;
-    width: 100%;
-}
-
-.card {
-    padding: 22px;
-}
-
-.card h3 {
-    font-size: 1.1rem;
-}
-
-.contact-links a {
-    padding: 20px;
-}
-
-.contact-links span {
-    overflow-wrap: anywhere;
-}
-
-section > h2 {
-    font-size: 1.7rem;
-}
-
-.footer-links {
-    gap: 12px;
-}
-
+@media (max-width: 480px) {
     section {
         padding: 70px 20px;
     }
 
+    nav {
+        padding: 14px 20px;
+    }
+
+    nav h2 {
+        font-size: 1.05rem;
+    }
+
+    nav div {
+        gap: 10px 14px;
+    }
+
+    nav a {
+        font-size: 0.82rem;
+    }
+
     .hero {
-        padding-top: 60px;
-        padding-bottom: 60px;
+        padding-top: 50px;
+        padding-bottom: 55px;
+    }
+
+    .hero-grid {
+        gap: 35px;
+    }
+
+    .hero .intro {
+        font-size: 0.85rem;
     }
 
     .hero h1 {
         font-size: 2.15rem;
+        line-height: 1.12;
+        letter-spacing: -0.5px;
     }
 
     .hero h2 {
         font-size: 1rem;
+        line-height: 1.5;
     }
 
-    .hero > p:not(.intro) {
+    .hero-summary {
         font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .hero-tags {
+        gap: 8px;
+    }
+
+    .hero-tags span {
+        font-size: 0.8rem;
+        padding: 6px 10px;
     }
 
     .buttons {
         grid-template-columns: 1fr;
+        gap: 10px;
     }
 
-    .hero-tags span {
-        font-size: 0.82rem;
-        padding: 6px 11px;
+    .evidence-card {
+        padding: 25px 22px;
+        border-radius: 18px;
     }
 
-   #about,
-   #experience,
-   #tools {
-    padding-left: 30px;
-    padding-right: 30px;
+    .evidence-card h3 {
+        font-size: 1.45rem;
+    }
+
+    .impact-strip {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .impact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .impact-item {
+        border-right: none;
+        border-bottom: 1px solid #e2e8f0;
+    }
+
+    .impact-item:last-child {
+        border-bottom: none;
+    }
+
+    .card {
+        padding: 22px;
+    }
+
+    .card h3 {
+        font-size: 1.1rem;
+    }
+
+    .contact-links a {
+        padding: 20px;
+    }
+
+    .contact-links span {
+        overflow-wrap: anywhere;
+    }
+
+    section > h2 {
+        font-size: 1.7rem;
+    }
+
+    #about,
+    #experience,
+    #tools {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .footer-links {
+        gap: 12px;
+    }
 }
-}
+
+/* ================================
+   REDUCED MOTION
+   ================================ */
+
 @media (prefers-reduced-motion: reduce) {
-
     html {
         scroll-behavior: auto;
     }
@@ -966,7 +827,9 @@ section > h2 {
     }
 
     .card:hover,
-    .contact-links a:hover {
+    .contact-links a:hover,
+    .btn-primary:hover,
+    .btn-secondary:hover {
         transform: none;
     }
 }
