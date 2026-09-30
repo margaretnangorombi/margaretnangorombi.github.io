@@ -24,7 +24,9 @@ a {
 }
 
 
-/* NAVIGATION */
+/* ================================
+   NAVIGATION
+   ================================ */
 
 header {
     background: #ffffff;
@@ -41,16 +43,19 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 25px;
 }
 
 nav h2 {
     color: #172554;
     font-size: 1.25rem;
+    white-space: nowrap;
 }
 
 nav div {
     display: flex;
-    gap: 28px;
+    gap: 24px;
+    align-items: center;
 }
 
 nav a {
@@ -64,7 +69,9 @@ nav a:hover {
 }
 
 
-/* GENERAL SECTIONS */
+/* ================================
+   GENERAL SECTIONS
+   ================================ */
 
 section {
     max-width: 1150px;
@@ -85,7 +92,9 @@ section > p {
 }
 
 
-/* HERO */
+/* ================================
+   HERO
+   ================================ */
 
 .hero {
     min-height: 82vh;
@@ -125,7 +134,34 @@ section > p {
     color: #64748b;
 }
 
-/* BUTTONS */
+
+/* HERO SKILL TAGS */
+
+.hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+    margin-bottom: 5px;
+}
+
+.hero-tags span {
+    display: inline-flex;
+    align-items: center;
+    background-color: #f1f5f9;
+    color: #172554;
+    border: 1px solid #cbd5e1;
+    padding: 7px 14px;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+
+/* ================================
+   HERO BUTTONS
+   ================================ */
 
 .buttons {
     margin-top: 35px;
@@ -147,7 +183,7 @@ section > p {
 
 .btn-primary {
     background: #172554;
-    color: white;
+    color: #ffffff;
     border: 2px solid #172554;
 }
 
@@ -157,24 +193,26 @@ section > p {
 }
 
 .btn-secondary {
-    background: white;
+    background: #ffffff;
     color: #172554;
     border: 2px solid #172554;
 }
 
 .btn-secondary:hover {
     background: #172554;
-    color: white;
+    color: #ffffff;
 }
 
 
-/* ABOUT */
+/* ================================
+   ABOUT
+   ================================ */
 
 #about {
     background: #f8fafc;
     max-width: 100%;
-    padding-left: calc((100% - 1090px) / 2);
-    padding-right: calc((100% - 1090px) / 2);
+    padding-left: max(30px, calc((100% - 1090px) / 2));
+    padding-right: max(30px, calc((100% - 1090px) / 2));
 }
 
 #about p {
@@ -182,7 +220,10 @@ section > p {
     max-width: 900px;
 }
 
-/* EXPERTISE CARDS */
+
+/* ================================
+   CARDS
+   ================================ */
 
 .cards {
     display: grid;
@@ -195,7 +236,7 @@ section > p {
     border: 1px solid #e5e7eb;
     border-radius: 12px;
     padding: 30px;
-    background: white;
+    background: #ffffff;
     transition: 0.25s ease;
 }
 
@@ -215,19 +256,21 @@ section > p {
 }
 
 
-/* EXPERIENCE */
+/* ================================
+   EXPERIENCE
+   ================================ */
 
 #experience {
     background: #f8fafc;
     max-width: 100%;
-    padding-left: calc((100% - 1090px) / 2);
-    padding-right: calc((100% - 1090px) / 2);
+    padding-left: max(30px, calc((100% - 1090px) / 2));
+    padding-right: max(30px, calc((100% - 1090px) / 2));
 }
 
 
-/* CONTACT */
-
-/* CONTACT */
+/* ================================
+   CONTACT
+   ================================ */
 
 #contact {
     text-align: center;
@@ -274,9 +317,9 @@ section > p {
 }
 
 
-/* FOOTER */
-
-/* FOOTER */
+/* ================================
+   FOOTER
+   ================================ */
 
 footer {
     background: #0f172a;
@@ -314,9 +357,9 @@ footer {
 }
 
 
-/* MOBILE */
-
-/* MOBILE */
+/* ================================
+   TABLET / MOBILE
+   ================================ */
 
 @media (max-width: 768px) {
 
@@ -362,9 +405,9 @@ footer {
 
     .buttons a {
         width: 100%;
-        text-align: center;
         padding: 12px 10px;
         font-size: 0.9rem;
+        text-align: center;
     }
 
     .contact-links {
@@ -388,11 +431,19 @@ footer {
 }
 
 
+/* ================================
+   SMALL PHONES
+   ================================ */
+
 @media (max-width: 480px) {
 
     section {
-        padding-left: 20px;
-        padding-right: 20px;
+        padding: 70px 20px;
+    }
+
+    .hero {
+        padding-top: 60px;
+        padding-bottom: 60px;
     }
 
     .hero h1 {
@@ -400,6 +451,10 @@ footer {
     }
 
     .hero h2 {
+        font-size: 1rem;
+    }
+
+    .hero > p:not(.intro) {
         font-size: 1rem;
     }
 
@@ -411,28 +466,10 @@ footer {
         font-size: 0.82rem;
         padding: 6px 11px;
     }
-}
 
-
-/* HERO SKILL TAGS */
-
-.hero-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 24px;
-    margin-bottom: 5px;
-}
-
-.hero-tags span {
-    display: inline-flex;
-    align-items: center;
-    background-color: #f1f5f9;
-    color: #172554;
-    border: 1px solid #cbd5e1;
-    padding: 7px 14px;
-    border-radius: 999px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    line-height: 1.4;
+    #about,
+    #experience {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
