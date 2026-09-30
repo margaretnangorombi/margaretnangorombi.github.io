@@ -93,6 +93,25 @@ section > p {
     color: #4b5563;
 }
 
+/* ================================
+   SECTION HEADING ACCENTS
+   ================================ */
+
+section:not(.hero) > h2 {
+    position: relative;
+    padding-top: 18px;
+}
+
+section:not(.hero) > h2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45px;
+    height: 4px;
+    background: #2563eb;
+    border-radius: 4px;
+}
 
 /* ================================
    HERO
@@ -341,7 +360,10 @@ section > p {
     font-size: 0.95rem;
 }
 
-
+#contact > h2::before {
+    left: 50%;
+    transform: translateX(-50%);
+}
 /* ================================
    FOOTER
    ================================ */
