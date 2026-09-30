@@ -410,7 +410,21 @@ footer {
     color: #ffffff;
 }
 
+/* ================================
+   ACCESSIBILITY
+   ================================ */
 
+a:focus-visible {
+    outline: 3px solid #2563eb;
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
+.buttons a:focus-visible,
+.contact-links a:focus-visible {
+    outline: 3px solid #2563eb;
+    outline-offset: 4px;
+}
 /* ================================
    TABLET / MOBILE
    ================================ */
@@ -539,4 +553,22 @@ footer {
     padding-left: 30px;
     padding-right: 30px;
 }
+}
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+        animation: none !important;
+    }
+
+    .card:hover,
+    .contact-links a:hover {
+        transform: none;
+    }
 }
