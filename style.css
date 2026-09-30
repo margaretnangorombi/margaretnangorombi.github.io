@@ -70,7 +70,14 @@ nav a:hover {
     color: #2563eb;
 }
 
+nav a.active {
+    color: #2563eb;
+}
 
+nav a.active {
+    color: #2563eb;
+    font-weight: 700;
+}
 /* ================================
    GENERAL SECTIONS
    ================================ */
