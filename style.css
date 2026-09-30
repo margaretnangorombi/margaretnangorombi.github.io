@@ -124,18 +124,17 @@ section:not(.hero) > h2::before {
 
 .hero {
     max-width: 1200px;
-    min-height: 82vh;
+    min-height: auto;
     margin: auto;
-    padding: 90px 30px 70px;
+    padding: 65px 30px 50px;
     display: block;
 }
 
 .hero-grid {
     display: grid;
     grid-template-columns: minmax(0, 1.2fr) minmax(330px, 0.8fr);
-    gap: 70px;
+    gap: 60px;
     align-items: center;
-    min-height: 65vh;
 }
 
 .hero-content {
@@ -288,15 +287,15 @@ section:not(.hero) > h2::before {
 
 .evidence-card h3 {
     color: #ffffff;
-    font-size: 1.8rem;
-    line-height: 1.3;
-    margin-bottom: 30px;
+    font-size: 1.75rem;
+    line-height: 1.25;
+    margin-bottom: 24px;
 }
 
 .workflow {
     display: flex;
     flex-direction: column;
-    gap: 22px;
+    gap: 17px;
 }
 
 .workflow-item {
@@ -627,8 +626,8 @@ a:focus-visible {
         width: 100%;
     }
 
-    .evidence-card {
-        padding: 30px;
+   .evidence-card {
+    padding: 32px 36px;
     }
 
     .impact-grid {
