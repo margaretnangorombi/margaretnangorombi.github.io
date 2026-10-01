@@ -4,872 +4,2714 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Margaret Nangorombi | Portfolio</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta name="description" content="Portfolio of Margaret Nangorombi Mwangi — Research, Monitoring & Evaluation, Data & Insights Professional.">
+    <title>Margaret Nangorombi Mwangi | Research, M&E, Data & Insights</title>
 
-<link rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin>
+    <style>
+/* =========================================================
+   MARGARET NANGOROMBI MWANGI — PORTFOLIO V9
+   Premium Research / M&E / Data Portfolio
+   ========================================================= */
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=4">
+:root {
+    --navy-950: #06111f;
+    --navy-900: #091827;
+    --navy-850: #0d1f33;
+    --navy-800: #12263d;
+    --navy-700: #17314f;
+
+    --blue-500: #3b82f6;
+    --blue-400: #60a5fa;
+    --cyan-400: #22d3ee;
+    --cyan-300: #67e8f9;
+
+    --white: #ffffff;
+    --ice: #eef5ff;
+    --surface: #f7f9fc;
+    --surface-2: #edf3fb;
+
+    --ink: #0f172a;
+    --ink-2: #1e293b;
+    --muted: #64748b;
+    --muted-dark: #9fb0c7;
+
+    --line-light: #dbe4ef;
+    --line-dark: rgba(255, 255, 255, 0.09);
+
+    --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.08);
+    --shadow-dark: 0 22px 60px rgba(0, 0, 0, 0.22);
+
+    --radius-lg: 28px;
+    --radius-md: 18px;
+    --radius-sm: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    background: var(--white);
+    color: var(--ink);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(6, 17, 31, 0.92);
+    border-bottom: 1px solid var(--line-dark);
+    backdrop-filter: blur(14px);
+}
+
+.site-nav {
+    max-width: 1240px;
+    margin: 0 auto;
+    min-height: 78px;
+    padding: 0 28px;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
+    color: var(--ice);
+    font-weight: 800;
+    white-space: nowrap;
+    margin-right: auto;
+}
+
+.brand-mark {
+    width: 32px;
+    height: 32px;
+    border-radius: 9px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--blue-500), var(--cyan-400));
+    color: var(--navy-950);
+    font-size: 0.9rem;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a {
+    position: relative;
+    color: var(--muted-dark);
+    font-size: 0.88rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--white);
+}
+
+.nav-links a.active::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+    background: linear-gradient(90deg, var(--blue-500), var(--cyan-400));
+    border-radius: 999px;
+}
+
+.nav-cta {
+    padding: 10px 16px;
+    border-radius: 999px;
+    border: 1px solid rgba(96, 165, 250, 0.4);
+    color: var(--ice);
+    font-size: 0.84rem;
+    font-weight: 700;
+    transition: 0.2s ease;
+}
+
+.nav-cta:hover {
+    background: rgba(59, 130, 246, 0.12);
+    border-color: rgba(103, 232, 249, 0.5);
+}
+
+/* =========================================================
+   SHARED
+   ========================================================= */
+
+.section {
+    scroll-margin-top: 90px;
+}
+
+.section-shell,
+.hero-shell,
+.footer-shell {
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.section {
+    padding: 110px 28px;
+}
+
+.section-light {
+    background: var(--surface);
+}
+
+.section-dark {
+    background:
+        radial-gradient(circle at 85% 5%, rgba(59, 130, 246, 0.10), transparent 28%),
+        var(--navy-950);
+    color: var(--ice);
+}
+
+.section-kicker {
+    color: var(--blue-500);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.section-dark .section-kicker,
+.contact-section .section-kicker {
+    color: var(--cyan-400);
+}
+
+.section-heading h2,
+.split-heading h2,
+.contact-copy h2 {
+    font-size: clamp(2.4rem, 4vw, 4.6rem);
+    line-height: 1.03;
+    letter-spacing: -2.5px;
+}
+
+.split-heading {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 80px;
+    align-items: end;
+    margin-bottom: 55px;
+}
+
+.split-heading > p {
+    color: var(--muted-dark);
+    max-width: 560px;
+    font-size: 1.05rem;
+    line-height: 1.9;
+}
+
+.split-heading-light > p {
+    color: var(--muted);
+}
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 50px;
+    padding: 0 20px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: 800;
+    transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--blue-500), var(--cyan-400));
+    color: var(--navy-950);
+}
+
+.btn-ghost {
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--white);
+}
+
+.btn-link {
+    color: var(--cyan-300);
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero-section {
+    min-height: calc(100vh - 78px);
+    padding: 84px 28px 74px;
+    background:
+        radial-gradient(circle at 70% 20%, rgba(59, 130, 246, 0.14), transparent 28%),
+        radial-gradient(circle at 88% 80%, rgba(34, 211, 238, 0.08), transparent 22%),
+        var(--navy-950);
+    color: var(--ice);
+    overflow: hidden;
+}
+
+.hero-shell {
+    display: grid;
+    grid-template-columns: 1.08fr 0.92fr;
+    gap: 72px;
+    align-items: center;
+}
+
+.eyebrow-row {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--cyan-300);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 1.7px;
+    margin-bottom: 25px;
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--cyan-400);
+    box-shadow: 0 0 0 8px rgba(34, 211, 238, 0.08);
+}
+
+.hero-copy h1 {
+    font-size: clamp(3.4rem, 6vw, 6.7rem);
+    line-height: 0.96;
+    letter-spacing: -5px;
+    max-width: 850px;
+}
+
+.hero-copy h1 span {
+    display: block;
+    color: transparent;
+    background: linear-gradient(90deg, var(--blue-400), var(--cyan-300));
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.hero-subtitle {
+    max-width: 760px;
+    color: var(--muted-dark);
+    font-size: 1.08rem;
+    line-height: 1.85;
+    margin-top: 28px;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    margin-top: 34px;
+}
+
+.hero-metrics {
+    margin-top: 46px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid var(--line-dark);
+    border-bottom: 1px solid var(--line-dark);
+}
+
+.hero-metrics div {
+    padding: 18px 16px 18px 0;
+    border-right: 1px solid var(--line-dark);
+}
+
+.hero-metrics div:last-child {
+    border-right: none;
+    padding-left: 18px;
+}
+
+.hero-metrics div:not(:first-child) {
+    padding-left: 18px;
+}
+
+.hero-metrics strong {
+    display: block;
+    color: var(--white);
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-bottom: 2px;
+}
+
+.hero-metrics span {
+    display: block;
+    color: var(--muted-dark);
+    font-size: 0.76rem;
+    line-height: 1.35;
+}
+
+/* HERO PANEL */
+
+.hero-panel {
+    position: relative;
+    padding: 34px;
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(96, 165, 250, 0.22);
+    background:
+        linear-gradient(145deg, rgba(18, 38, 61, 0.96), rgba(9, 24, 39, 0.98));
+    box-shadow: var(--shadow-dark);
+    overflow: hidden;
+}
+
+.hero-panel::after {
+    content: "";
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background: rgba(59, 130, 246, 0.08);
+    right: -80px;
+    bottom: -80px;
+}
+
+.panel-topline {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    align-items: center;
+    color: var(--cyan-300);
+    font-size: 0.73rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.panel-chip {
+    padding: 6px 9px;
+    border-radius: 999px;
+    border: 1px solid rgba(103, 232, 249, 0.18);
+    background: rgba(34, 211, 238, 0.06);
+    letter-spacing: 0;
+    color: var(--cyan-300);
+}
+
+.hero-panel h2 {
+    position: relative;
+    z-index: 1;
+    color: var(--white);
+    font-size: 2rem;
+    line-height: 1.15;
+    margin: 20px 0 28px;
+}
+
+.evidence-flow {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    gap: 18px;
+}
+
+.flow-step {
+    display: grid;
+    grid-template-columns: 42px 1fr;
+    gap: 14px;
+    align-items: start;
+}
+
+.flow-number {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(59, 130, 246, 0.15);
+    border: 1px solid rgba(96, 165, 250, 0.24);
+    color: var(--blue-400);
+    font-size: 0.75rem;
+    font-weight: 800;
+}
+
+.flow-step h3 {
+    color: var(--white);
+    font-size: 0.98rem;
+    margin-bottom: 2px;
+}
+
+.flow-step p {
+    color: var(--muted-dark);
+    font-size: 0.84rem;
+    line-height: 1.55;
+}
+
+.mini-evidence-board {
+    position: relative;
+    z-index: 1;
+    margin-top: 28px;
+    padding: 18px;
+    border-radius: 16px;
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    gap: 18px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--line-dark);
+}
+
+.mini-chart {
+    height: 88px;
+    display: flex;
+    align-items: end;
+    gap: 7px;
+}
+
+.mini-chart span {
+    flex: 1;
+    border-radius: 6px 6px 2px 2px;
+    background: linear-gradient(180deg, var(--cyan-400), var(--blue-500));
+}
+
+.mini-bars {
+    display: grid;
+    align-content: center;
+    gap: 10px;
+}
+
+.mini-bars i {
+    height: 8px;
+    display: block;
+    border-radius: 999px;
+    background: rgba(96, 165, 250, 0.35);
+}
+
+/* =========================================================
+   ABOUT
+   ========================================================= */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 90px;
+    align-items: start;
+}
+
+.section-heading h2 {
+    color: var(--ink);
+    max-width: 580px;
+}
+
+.about-content {
+    background: var(--white);
+    border: 1px solid var(--line-light);
+    border-radius: var(--radius-lg);
+    padding: 38px;
+    box-shadow: var(--shadow-soft);
+}
+
+.about-content p {
+    color: var(--muted);
+    margin-bottom: 18px;
+}
+
+.about-content .about-lead {
+    color: var(--ink-2);
+    font-size: 1.12rem;
+    font-weight: 600;
+}
+
+.about-points {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: 26px;
+}
+
+.about-points span {
+    padding: 8px 11px;
+    border-radius: 999px;
+    background: var(--surface-2);
+    border: 1px solid var(--line-light);
+    color: var(--ink-2);
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+/* =========================================================
+   PROJECTS
+   ========================================================= */
+
+.projects-section {
+    padding-top: 115px;
+    padding-bottom: 115px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.project-card {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid var(--line-dark);
+    background: var(--navy-850);
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(103, 232, 249, 0.3);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.18);
+}
+
+.project-featured {
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+}
+
+.project-visual {
+    min-height: 260px;
+    position: relative;
+    overflow: hidden;
+    background: var(--navy-900);
+    border-bottom: 1px solid var(--line-dark);
+}
+
+.project-featured .project-visual {
+    border-bottom: none;
+    border-right: 1px solid var(--line-dark);
+    min-height: 100%;
+}
+
+.project-body {
+    padding: 30px;
+}
+
+.project-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    color: var(--cyan-300);
+    font-size: 0.73rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+}
+
+.project-body h3 {
+    color: var(--white);
+    font-size: 1.45rem;
+    line-height: 1.3;
+    margin-bottom: 14px;
+}
+
+.project-body > p {
+    color: var(--muted-dark);
+    font-size: 0.93rem;
+    line-height: 1.75;
+}
+
+.project-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    padding: 18px 0;
+    margin: 22px 0;
+    border-top: 1px solid var(--line-dark);
+    border-bottom: 1px solid var(--line-dark);
+}
+
+.project-detail-grid span {
+    display: block;
+    color: #7f91aa;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 0.7px;
+    margin-bottom: 4px;
+}
+
+.project-detail-grid strong {
+    color: var(--ice);
+    font-size: 0.84rem;
+}
+
+.tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 24px;
+}
+
+.tag-row span {
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: rgba(34, 211, 238, 0.04);
+    border: 1px solid rgba(103, 232, 249, 0.18);
+    color: var(--cyan-300);
+    font-size: 0.72rem;
+    font-weight: 600;
+}
+
+/* PROJECT VISUALS */
+
+.visual-impact {
+    padding: 34px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background:
+        radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.22), transparent 30%),
+        linear-gradient(145deg, #0c2035, #112d49);
+}
+
+.visual-label {
+    color: var(--cyan-300);
+    font-size: 0.74rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.visual-title {
+    color: var(--white);
+    font-size: 2.15rem;
+    font-weight: 800;
+    margin: 10px 0 22px;
+}
+
+.visual-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.visual-metrics span {
+    padding: 14px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--line-dark);
+    color: var(--muted-dark);
+    font-size: 0.72rem;
+}
+
+.visual-metrics strong {
+    display: block;
+    color: var(--ice);
+    margin-bottom: 2px;
+}
+
+.visual-lines {
+    display: grid;
+    gap: 9px;
+    margin-top: 22px;
+}
+
+.visual-lines i {
+    display: block;
+    height: 7px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--blue-500), var(--cyan-400));
+}
+
+.visual-brand {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 28px;
+    align-items: center;
+    padding: 30px;
+    background:
+        linear-gradient(145deg, rgba(59, 130, 246, 0.12), rgba(34, 211, 238, 0.04)),
+        var(--navy-900);
+}
+
+.chart-ring {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background:
+        radial-gradient(circle at center, var(--navy-900) 52%, transparent 53%),
+        conic-gradient(var(--blue-500) 0 42%, var(--cyan-400) 42% 68%, rgba(255,255,255,.12) 68% 100%);
+}
+
+.chart-bars {
+    height: 140px;
+    display: flex;
+    align-items: end;
+    gap: 12px;
+}
+
+.chart-bars span {
+    flex: 1;
+    border-radius: 8px 8px 2px 2px;
+    background: linear-gradient(180deg, var(--cyan-400), var(--blue-500));
+}
+
+.visual-public {
+    padding: 34px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background:
+        radial-gradient(circle at 20% 30%, rgba(34, 211, 238, 0.12), transparent 30%),
+        var(--navy-900);
+}
+
+.poll-number {
+    color: var(--white);
+    font-size: 2.35rem;
+    font-weight: 800;
+}
+
+.poll-copy {
+    color: var(--muted-dark);
+    max-width: 360px;
+    margin-top: 8px;
+}
+
+.poll-dots {
+    display: flex;
+    gap: 7px;
+    margin-top: 24px;
+}
+
+.poll-dots span {
+    width: 36px;
+    height: 8px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--blue-500), var(--cyan-400));
+}
+
+.visual-campaign {
+    padding: 34px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background: var(--navy-900);
+}
+
+.campaign-arrow {
+    font-size: 6rem;
+    line-height: 1;
+    color: var(--cyan-400);
+}
+
+.campaign-lines {
+    display: grid;
+    gap: 12px;
+}
+
+.campaign-lines span {
+    color: var(--ice);
+    font-weight: 700;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--line-dark);
+}
+
+.visual-comms {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:
+        radial-gradient(circle at center, rgba(59, 130, 246, 0.12), transparent 35%),
+        var(--navy-900);
+}
+
+.comms-orbit {
+    width: 150px;
+    height: 150px;
+    border: 1px solid rgba(103, 232, 249, 0.2);
+    border-radius: 50%;
+    position: relative;
+}
+
+.comms-orbit::before {
+    content: "";
+    position: absolute;
+    inset: 24px;
+    border: 1px solid rgba(96, 165, 250, 0.22);
+    border-radius: 50%;
+}
+
+.comms-orbit span {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--cyan-400);
+}
+
+.comms-orbit span:nth-child(1) { top: 8px; left: 68px; }
+.comms-orbit span:nth-child(2) { bottom: 18px; left: 14px; }
+.comms-orbit span:nth-child(3) { right: 8px; bottom: 50px; }
+
+.comms-core {
+    position: absolute;
+    color: var(--white);
+    font-weight: 800;
+}
+
+.visual-national {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--navy-900);
+}
+
+.national-grid {
+    width: 210px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.national-grid span {
+    aspect-ratio: 1;
+    border-radius: 10px;
+    background: linear-gradient(145deg, rgba(59,130,246,.45), rgba(34,211,238,.18));
+    border: 1px solid rgba(96,165,250,.18);
+}
+
+/* =========================================================
+   EXPERIENCE TIMELINE
+   ========================================================= */
+
+.timeline {
+    position: relative;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    bottom: 20px;
+    left: 170px;
+    width: 2px;
+    background: linear-gradient(var(--blue-400), #c6d8ee);
+}
+
+.timeline-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 140px 34px 1fr;
+    gap: 14px;
+    margin-bottom: 34px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-date {
+    text-align: right;
+    padding-top: 26px;
+}
+
+.timeline-date span,
+.timeline-date strong {
+    display: block;
+}
+
+.timeline-date span {
+    color: #8294ab;
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.timeline-date strong {
+    color: var(--ink);
+    font-size: 0.88rem;
+    margin-top: 2px;
+}
+
+.timeline-dot {
+    position: relative;
+    z-index: 2;
+    margin-top: 31px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--blue-500);
+    border: 4px solid var(--surface);
+    box-shadow: 0 0 0 2px #b7d3fb;
+    justify-self: center;
+}
+
+.timeline-card {
+    background: var(--white);
+    border: 1px solid var(--line-light);
+    border-radius: var(--radius-md);
+    padding: 30px;
+    transition: 0.25s ease;
+}
+
+.timeline-card:hover {
+    transform: translateY(-4px);
+    border-color: #b9d4fa;
+    box-shadow: var(--shadow-soft);
+}
+
+.timeline-card-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: flex-start;
+    margin-bottom: 18px;
+}
+
+.timeline-type {
+    color: var(--blue-500);
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+.timeline-card h3 {
+    color: var(--ink);
+    font-size: 1.42rem;
+    margin-top: 3px;
+}
+
+.timeline-role {
+    padding: 7px 11px;
+    border-radius: 999px;
+    background: #eaf3ff;
+    color: #1d4ed8;
+    font-size: 0.73rem;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.timeline-card > p {
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+.tag-row-light span {
+    background: var(--surface);
+    border-color: var(--line-light);
+    color: #475569;
+}
+
+/* =========================================================
+   CAPABILITIES
+   ========================================================= */
+
+.capability-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.capability-card {
+    min-height: 310px;
+    padding: 30px;
+    border-radius: var(--radius-md);
+    background: var(--navy-850);
+    border: 1px solid var(--line-dark);
+    transition: 0.25s ease;
+}
+
+.capability-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(103, 232, 249, 0.28);
+}
+
+.capability-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(59, 130, 246, 0.12);
+    color: var(--blue-400);
+    font-size: 0.75rem;
+    font-weight: 800;
+    margin-bottom: 24px;
+}
+
+.capability-card h3 {
+    color: var(--white);
+    font-size: 1.35rem;
+    margin-bottom: 10px;
+}
+
+.capability-card > p {
+    color: var(--muted-dark);
+    font-size: 0.9rem;
+    line-height: 1.75;
+}
+
+/* =========================================================
+   IMPACT
+   ========================================================= */
+
+.impact-grid-v9 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.impact-card {
+    min-height: 245px;
+    padding: 30px;
+    background: var(--white);
+    border: 1px solid var(--line-light);
+    border-radius: var(--radius-md);
+    box-shadow: 0 10px 30px rgba(15,23,42,.04);
+}
+
+.impact-card-big {
+    grid-column: span 2;
+    background:
+        linear-gradient(135deg, #edf5ff, #ffffff 60%);
+}
+
+.impact-card strong {
+    display: block;
+    color: var(--blue-500);
+    font-size: 2.3rem;
+    line-height: 1;
+    font-weight: 800;
+    margin-bottom: 18px;
+}
+
+.impact-card h3 {
+    color: var(--ink);
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+}
+
+.impact-card p {
+    color: var(--muted);
+    font-size: 0.88rem;
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   EDUCATION & PROFESSIONAL DEVELOPMENT
+   ========================================================= */
+
+.education-section {
+    background:
+        radial-gradient(circle at 15% 10%, rgba(59, 130, 246, 0.10), transparent 30%),
+        linear-gradient(180deg, #091827 0%, #071421 100%);
+    color: var(--ice);
+}
+
+.education-heading > p {
+    color: var(--muted-dark);
+}
+
+.education-layout {
+    display: grid;
+    grid-template-columns: 0.92fr 1.08fr;
+    gap: 24px;
+    align-items: stretch;
+}
+
+.degree-card,
+.development-panel {
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--line-dark);
+    background: rgba(18, 38, 61, 0.78);
+}
+
+.degree-card {
+    position: relative;
+    padding: 34px;
+    min-height: 470px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.degree-card::after {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    background: linear-gradient(
+        145deg,
+        rgba(59, 130, 246, 0.18),
+        rgba(34, 211, 238, 0.04)
+    );
+    right: -100px;
+    bottom: -110px;
+}
+
+.degree-top {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+}
+
+.education-label {
+    color: var(--cyan-300);
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+}
+
+.education-year {
+    color: var(--muted-dark);
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.degree-mark {
+    position: relative;
+    z-index: 1;
+    margin: 54px 0 24px;
+    width: 86px;
+    height: 86px;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--blue-500), var(--cyan-400));
+    color: var(--navy-950);
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    box-shadow: 0 16px 40px rgba(59, 130, 246, 0.22);
+}
+
+.degree-card h3 {
+    position: relative;
+    z-index: 1;
+    color: var(--white);
+    font-size: 2rem;
+    line-height: 1.2;
+    max-width: 520px;
+}
+
+.institution {
+    position: relative;
+    z-index: 1;
+    color: #a9c3e8;
+    margin-top: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.degree-footer {
+    position: relative;
+    z-index: 1;
+    margin-top: auto;
+    padding-top: 28px;
+    border-top: 1px solid var(--line-dark);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.degree-footer span {
+    color: var(--muted-dark);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.development-panel {
+    padding: 32px 34px;
+}
+
+.development-heading {
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--line-dark);
+}
+
+.development-heading h3 {
+    color: var(--white);
+    font-size: 1.55rem;
+    margin-top: 7px;
+}
+
+.development-list {
+    display: grid;
+}
+
+.development-item {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 24px;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--line-dark);
+}
+
+.development-item:last-child {
+    border-bottom: none;
+}
+
+.development-item h4 {
+    color: var(--ice);
+    font-size: 0.98rem;
+    margin-bottom: 3px;
+}
+
+.development-item p {
+    color: var(--muted-dark);
+    font-size: 0.82rem;
+}
+
+.development-item > span {
+    padding: 7px 10px;
+    border-radius: 999px;
+    background: rgba(59, 130, 246, 0.09);
+    border: 1px solid rgba(96, 165, 250, 0.16);
+    color: var(--blue-400);
+    font-size: 0.72rem;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+.contact-section {
+    padding: 110px 28px;
+    color: var(--ice);
+    background:
+        radial-gradient(circle at 10% 0%, rgba(34,211,238,.11), transparent 30%),
+        radial-gradient(circle at 90% 70%, rgba(59,130,246,.12), transparent 28%),
+        var(--navy-900);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.contact-copy h2 {
+    max-width: 660px;
+}
+
+.contact-copy > p:not(.section-kicker) {
+    color: var(--muted-dark);
+    max-width: 630px;
+    margin-top: 24px;
+    font-size: 1.02rem;
+}
+
+.contact-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 34px;
+}
+
+.contact-card {
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--line-dark);
+    background: rgba(6, 17, 31, 0.55);
+    padding: 30px 34px;
+}
+
+.contact-row {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 22px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--line-dark);
+}
+
+.contact-row:last-child {
+    border-bottom: none;
+}
+
+.contact-row strong {
+    color: var(--white);
+    font-size: 0.88rem;
+}
+
+.contact-row a,
+.contact-row span {
+    color: #a9c3e8;
+    font-size: 0.92rem;
+    overflow-wrap: anywhere;
+}
+
+.contact-row a:hover {
+    color: var(--cyan-300);
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.site-footer {
+    background: #040c16;
+    color: #8294ab;
+    border-top: 1px solid var(--line-dark);
+}
+
+.footer-shell {
+    min-height: 82px;
+    padding: 0 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-shell p {
+    font-size: 0.82rem;
+}
+
+.footer-shell div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-shell a {
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+.footer-shell a:hover {
+    color: var(--white);
+}
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+a:focus-visible {
+    outline: 3px solid var(--cyan-400);
+    outline-offset: 4px;
+    border-radius: 5px;
+}
+
+/* =========================================================
+   RESPONSIVE — SMALL LAPTOP
+   ========================================================= */
+
+@media (max-width: 1080px) {
+    .site-nav {
+        flex-wrap: wrap;
+        padding-top: 14px;
+        padding-bottom: 14px;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero-shell {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-panel {
+        max-width: 760px;
+    }
+
+    .hero-copy h1 {
+        max-width: 1000px;
+    }
+
+    .about-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-featured {
+        grid-template-columns: 1fr;
+    }
+
+    .project-featured .project-visual {
+        border-right: none;
+        border-bottom: 1px solid var(--line-dark);
+        min-height: 320px;
+    }
+
+    .capability-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* =========================================================
+   RESPONSIVE — TABLET
+   ========================================================= */
+
+@media (max-width: 768px) {
+    .section,
+    .contact-section {
+        padding: 82px 22px;
+    }
+
+    .hero-section {
+        padding: 64px 22px 58px;
+    }
+
+    .nav-links {
+        gap: 16px;
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 3px;
+    }
+
+    .nav-cta {
+        display: none;
+    }
+
+    .hero-copy h1 {
+        font-size: clamp(3rem, 11vw, 5rem);
+        letter-spacing: -3px;
+    }
+
+    .hero-metrics {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-metrics div:nth-child(2) {
+        border-right: none;
+    }
+
+    .hero-metrics div:nth-child(1),
+    .hero-metrics div:nth-child(2) {
+        border-bottom: 1px solid var(--line-dark);
+    }
+
+    .split-heading {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin-bottom: 38px;
+    }
+
+    .about-grid {
+        gap: 35px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-featured {
+        grid-column: span 1;
+    }
+
+    .project-detail-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline::before {
+        left: 16px;
+    }
+
+    .timeline-item {
+        display: block;
+        padding-left: 48px;
+    }
+
+    .timeline-date {
+        text-align: left;
+        padding-top: 0;
+        padding-bottom: 8px;
+        display: flex;
+        gap: 6px;
+        align-items: center;
+    }
+
+    .timeline-date span,
+    .timeline-date strong {
+        display: inline;
+        margin-top: 0;
+    }
+
+    .timeline-dot {
+        position: absolute;
+        left: 8px;
+        top: 4px;
+        margin-top: 0;
+    }
+
+    .timeline-card-top {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .timeline-role {
+        white-space: normal;
+    }
+
+    .capability-grid,
+    .impact-grid-v9 {
+        grid-template-columns: 1fr;
+    }
+
+    .impact-card-big {
+        grid-column: span 1;
+    }
+
+
+    .education-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .degree-card {
+        min-height: 400px;
+    }
+
+    .contact-card {
+        padding: 26px;
+    }
+}
+
+/* =========================================================
+   RESPONSIVE — PHONE
+   ========================================================= */
+
+@media (max-width: 480px) {
+    .site-nav {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .brand span:last-child {
+        display: none;
+    }
+
+    .hero-section {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .hero-copy h1 {
+        font-size: 2.85rem;
+        letter-spacing: -2.5px;
+    }
+
+    .hero-subtitle {
+        font-size: 0.98rem;
+    }
+
+    .hero-actions {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .btn-link {
+        justify-content: flex-start;
+        width: auto;
+    }
+
+    .hero-panel {
+        padding: 25px 22px;
+    }
+
+    .hero-panel h2 {
+        font-size: 1.65rem;
+    }
+
+    .mini-evidence-board {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-metrics {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-metrics div,
+    .hero-metrics div:not(:first-child),
+    .hero-metrics div:last-child {
+        padding: 14px 0;
+        border-right: none;
+        border-bottom: 1px solid var(--line-dark);
+    }
+
+    .hero-metrics div:last-child {
+        border-bottom: none;
+    }
+
+    .section-heading h2,
+    .split-heading h2,
+    .contact-copy h2 {
+        font-size: 2.45rem;
+        letter-spacing: -1.8px;
+    }
+
+    .about-content {
+        padding: 26px 22px;
+    }
+
+    .project-body {
+        padding: 24px 21px;
+    }
+
+    .project-visual {
+        min-height: 220px;
+    }
+
+    .visual-metrics {
+        grid-template-columns: 1fr;
+    }
+
+    .visual-title {
+        font-size: 1.75rem;
+    }
+
+    .visual-brand {
+        grid-template-columns: 1fr;
+    }
+
+    .chart-bars {
+        height: 90px;
+    }
+
+    .campaign-arrow {
+        font-size: 4rem;
+    }
+
+    .timeline-item {
+        padding-left: 38px;
+    }
+
+    .timeline-card {
+        padding: 22px 20px;
+    }
+
+    .timeline::before {
+        left: 11px;
+    }
+
+    .timeline-dot {
+        left: 3px;
+    }
+
+    .capability-card,
+    .impact-card {
+        padding: 24px 21px;
+    }
+
+
+    .degree-card,
+    .development-panel {
+        padding: 24px 21px;
+    }
+
+    .degree-card {
+        min-height: 360px;
+    }
+
+    .degree-mark {
+        margin-top: 38px;
+    }
+
+    .degree-card h3 {
+        font-size: 1.55rem;
+    }
+
+    .development-item {
+        grid-template-columns: 1fr;
+        gap: 9px;
+    }
+
+    .development-item > span {
+        justify-self: start;
+    }
+
+    .contact-row {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    .footer-shell {
+        padding: 22px 18px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+    </style>
 </head>
 
 <body>
 
-    <header>
-        <nav>
-            <h2>Margaret Nangorombi</h2>
+<header class="site-header">
+    <nav class="site-nav">
+        <a class="brand" href="#top" aria-label="Go to top">
+            <span class="brand-mark">M</span>
+            <span>Margaret Nangorombi</span>
+        </a>
 
-            <div>
-                <a href="#about">About</a>
-                <a href="#expertise">Expertise</a>
-                <a href="#experience">Experience</a>
-                <a href="#projects">Projects</a>
-                <a href="#tools">Tools</a>
-                <a href="#achievements">Achievements</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-
- <section class="hero">
-
-    <div class="hero-grid">
-
-        <div class="hero-content">
-
-            <p class="intro">Hello, I'm</p>
-
-            <h1>
-                Margaret Nangorombi Mwangi
-            </h1>
-
-            <h2>
-                Research, Monitoring & Evaluation,
-                Data & Insights Professional
-            </h2>
-
-            <p class="hero-summary">
-                I turn research and data into practical evidence that helps
-                organisations learn, improve and make better-informed decisions.
-            </p>
-
-            <div class="hero-tags">
-                <span>Research</span>
-                <span>Monitoring & Evaluation</span>
-                <span>Data Analysis</span>
-                <span>Project Coordination</span>
-                <span>Evidence & Insights</span>
-            </div>
-
-            <div class="buttons">
-
-                <a href="#projects" class="btn-primary">
-                    View My Work
-                </a>
-
-                <a href="Margaret-Nangorombi-Mwangi-CV.pdf"
-                   class="btn-secondary"
-                   download>
-                    Download CV
-                </a>
-
-                <a href="https://www.linkedin.com/in/margaret-nangorombi-mwangi-8ba0b8177/"
-                   class="btn-secondary"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    LinkedIn
-                </a>
-
-                <a href="#contact" class="btn-secondary">
-                    Contact Me
-                </a>
-
-            </div>
-
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#projects">Work</a>
+            <a href="#experience">Experience</a>
+            <a href="#capabilities">Capabilities</a>
+            <a href="#impact">Impact</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
         </div>
 
+        <a class="nav-cta" href="Margaret-Nangorombi-Mwangi-CV.pdf" download>
+            Download CV
+        </a>
+    </nav>
+</header>
 
-        <div class="hero-visual">
+<main id="top">
 
-            <div class="evidence-card">
+    <!-- HERO -->
+    <section class="hero-section">
+        <div class="hero-shell">
 
-                <p class="evidence-label">HOW I WORK</p>
-
-                <h3>
-                    Turning evidence into action
-                </h3>
-
-                <div class="workflow">
-
-                    <div class="workflow-item">
-                        <span>01</span>
-                        <div>
-                            <strong>Research</strong>
-                            <p>Design studies and collect credible evidence.</p>
-                        </div>
-                    </div>
-
-                    <div class="workflow-item">
-                        <span>02</span>
-                        <div>
-                            <strong>Analyse</strong>
-                            <p>Identify patterns, findings and meaningful insights.</p>
-                        </div>
-                    </div>
-
-                    <div class="workflow-item">
-                        <span>03</span>
-                        <div>
-                            <strong>Translate</strong>
-                            <p>Turn findings into clear reports and dashboards.</p>
-                        </div>
-                    </div>
-
-                    <div class="workflow-item">
-                        <span>04</span>
-                        <div>
-                            <strong>Inform</strong>
-                            <p>Support learning, adaptation and better decisions.</p>
-                        </div>
-                    </div>
-
+            <div class="hero-copy">
+                <div class="eyebrow-row">
+                    <span class="status-dot"></span>
+                    <span>RESEARCH • MONITORING & EVALUATION • DATA & INSIGHTS</span>
                 </div>
 
+                <h1>
+                    Turning evidence into
+                    <span>clear decisions</span>
+                    and measurable impact.
+                </h1>
+
+                <p class="hero-subtitle">
+                    I support research and evaluation from study design and digital data
+                    collection to analysis, reporting and evidence generation — helping
+                    organisations understand what is working, what needs to change and what to do next.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">Explore My Work <span>→</span></a>
+                    <a href="Margaret-Nangorombi-Mwangi-CV.pdf" class="btn btn-ghost" download>Download CV ↓</a>
+                    <a href="https://www.linkedin.com/in/margaret-nangorombi-mwangi-8ba0b8177/"
+                       class="btn btn-link"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        LinkedIn ↗
+                    </a>
+                </div>
+
+                <div class="hero-metrics">
+                    <div>
+                        <strong>5+</strong>
+                        <span>Years of experience</span>
+                    </div>
+                    <div>
+                        <strong>100+</strong>
+                        <span>Researchers trained</span>
+                    </div>
+                    <div>
+                        <strong>National</strong>
+                        <span>Research studies</span>
+                    </div>
+                    <div>
+                        <strong>End-to-End</strong>
+                        <span>Research support</span>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="hero-panel" aria-label="How I work">
+                <div class="panel-topline">
+                    <span>HOW I WORK</span>
+                    <span class="panel-chip">Evidence → Action</span>
+                </div>
+
+                <h2>From questions to decisions.</h2>
+
+                <div class="evidence-flow">
+                    <div class="flow-step">
+                        <span class="flow-number">01</span>
+                        <div>
+                            <h3>Design</h3>
+                            <p>Frame the questions, methods and indicators.</p>
+                        </div>
+                    </div>
+
+                    <div class="flow-step">
+                        <span class="flow-number">02</span>
+                        <div>
+                            <h3>Collect</h3>
+                            <p>Coordinate reliable digital and field data collection.</p>
+                        </div>
+                    </div>
+
+                    <div class="flow-step">
+                        <span class="flow-number">03</span>
+                        <div>
+                            <h3>Analyse</h3>
+                            <p>Turn raw data into patterns, findings and insight.</p>
+                        </div>
+                    </div>
+
+                    <div class="flow-step">
+                        <span class="flow-number">04</span>
+                        <div>
+                            <h3>Translate</h3>
+                            <p>Build reports, dashboards and practical recommendations.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mini-evidence-board" aria-hidden="true">
+                    <div class="mini-chart">
+                        <span style="height:38%"></span>
+                        <span style="height:58%"></span>
+                        <span style="height:48%"></span>
+                        <span style="height:74%"></span>
+                        <span style="height:88%"></span>
+                    </div>
+                    <div class="mini-bars">
+                        <i style="width:88%"></i>
+                        <i style="width:72%"></i>
+                        <i style="width:61%"></i>
+                    </div>
+                </div>
+            </aside>
+
+        </div>
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about" class="section section-light">
+        <div class="section-shell about-grid">
+
+            <div class="section-heading">
+                <p class="section-kicker">ABOUT ME</p>
+                <h2>Research discipline meets practical evidence.</h2>
+            </div>
+
+            <div class="about-content">
+                <p class="about-lead">
+                    I am a research, monitoring and evaluation, and data professional
+                    with over five years of experience supporting research, programme
+                    evaluation, data quality, digital data collection, analysis,
+                    reporting and evidence generation.
+                </p>
+
+                <p>
+                    My work spans the full research and learning cycle — from study
+                    design, survey programming and field coordination to data validation,
+                    analysis, visualisation and development of reports, dashboards and
+                    actionable insights.
+                </p>
+
+                <p>
+                    I am particularly interested in using data and evidence to help
+                    organisations understand what is working, identify areas for
+                    improvement and make better-informed decisions.
+                </p>
+
+                <div class="about-points">
+                    <span>Quantitative & qualitative research</span>
+                    <span>Monitoring, evaluation & learning</span>
+                    <span>Data quality & validation</span>
+                    <span>Fieldwork coordination</span>
+                    <span>Dashboards & reporting</span>
+                    <span>Evidence communication</span>
+                </div>
             </div>
 
         </div>
-
-    </div>
-
-</section>
-
-        <section class="impact-strip">
-
-    <div class="impact-grid">
-
-        <div class="impact-item">
-            <strong>5+</strong>
-            <span>Years of Experience</span>
-        </div>
-
-        <div class="impact-item">
-            <strong>50+</strong>
-            <span>Researchers Trained</span>
-        </div>
-
-        <div class="impact-item">
-            <strong>National</strong>
-            <span>Research & Evaluation Studies</span>
-        </div>
-
-        <div class="impact-item">
-            <strong>End-to-End</strong>
-            <span>Research & Evidence Support</span>
-        </div>
-
-    </div>
-
-</section>
-        <section id="about">
-
-    <h2>About Me</h2>
-
-    <p>
-        I am a research, monitoring and evaluation, and data professional
-        with over five years of experience supporting research, programme
-        evaluation, data quality, digital data collection, analysis,
-        reporting and evidence generation.
-    </p>
-
-    <p>
-        My work spans the full research and learning cycle — from study
-        design, survey programming and field coordination to data validation,
-        analysis, visualization and development of reports, dashboards and
-        actionable insights.
-    </p>
-
-    <p>
-        I am particularly interested in using data and evidence to help
-        organizations understand what is working, identify areas for
-        improvement and make better-informed decisions.
-    </p>
-
-</section>    
+    </section>
 
 
-        <section id="expertise">
+    <!-- SELECTED WORK -->
+    <section id="projects" class="section section-dark projects-section">
+        <div class="section-shell">
 
-            <h2>Areas of Expertise</h2>
-
-            <div class="cards">
-
-                <div class="card">
-                    <h3>Research</h3>
-                    <p>
-                        Quantitative and qualitative research, survey design,
-                        FGDs, KIIs and research coordination.
-                    </p>
+            <div class="split-heading">
+                <div>
+                    <p class="section-kicker">SELECTED WORK</p>
+                    <h2>Research & evaluation case studies</h2>
                 </div>
 
-                <div class="card">
+                <p>
+                    Selected assignments showing experience across impact evaluation,
+                    public opinion research, market research, communications evaluation
+                    and national-level studies.
+                </p>
+            </div>
+
+            <div class="project-grid">
+
+                <article class="project-card project-featured">
+                    <div class="project-visual visual-impact" aria-hidden="true">
+                        <div class="visual-label">IMPACT EVALUATION</div>
+                        <div class="visual-title">Women in Business</div>
+                        <div class="visual-metrics">
+                            <span><strong>Mixed</strong> Methods</span>
+                            <span><strong>Finance</strong> Inclusion</span>
+                            <span><strong>Insight</strong> Reporting</span>
+                        </div>
+                        <div class="visual-lines">
+                            <i style="width:82%"></i>
+                            <i style="width:64%"></i>
+                            <i style="width:73%"></i>
+                        </div>
+                    </div>
+
+                    <div class="project-body">
+                        <div class="project-meta">
+                            <span>Impact Evaluation</span>
+                            <span>01</span>
+                        </div>
+
+                        <h3>KCB Women in Business Impact Evaluation</h3>
+
+                        <p>
+                            Supported research examining the experiences and outcomes
+                            of women entrepreneurs participating in KCB's Women in Business programme.
+                        </p>
+
+                        <div class="project-detail-grid">
+                            <div>
+                                <span>Research Area</span>
+                                <strong>Financial Inclusion</strong>
+                            </div>
+                            <div>
+                                <span>Approach</span>
+                                <strong>Mixed Methods</strong>
+                            </div>
+                            <div>
+                                <span>Contribution</span>
+                                <strong>Research, Analysis & Reporting</strong>
+                            </div>
+                        </div>
+
+                        <div class="tag-row">
+                            <span>Impact Evaluation</span>
+                            <span>Qualitative</span>
+                            <span>Quantitative</span>
+                            <span>Financial Inclusion</span>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="project-card">
+                    <div class="project-visual visual-brand" aria-hidden="true">
+                        <div class="chart-ring"></div>
+                        <div class="chart-bars">
+                            <span style="height:50%"></span>
+                            <span style="height:72%"></span>
+                            <span style="height:63%"></span>
+                            <span style="height:84%"></span>
+                        </div>
+                    </div>
+
+                    <div class="project-body">
+                        <div class="project-meta">
+                            <span>Market Research</span>
+                            <span>02</span>
+                        </div>
+                        <h3>KCB Brand Asset Evaluation Study</h3>
+                        <p>
+                            Contributed to research assessing brand visibility,
+                            sponsorship impact and customer engagement to support
+                            strategic decision-making.
+                        </p>
+                        <div class="tag-row">
+                            <span>Consumer Insights</span>
+                            <span>Brand Research</span>
+                            <span>Analysis</span>
+                            <span>Reporting</span>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="project-card">
+                    <div class="project-visual visual-public" aria-hidden="true">
+                        <div class="poll-number">National</div>
+                        <div class="poll-copy">Public opinion research across governance, social and socio-economic issues.</div>
+                        <div class="poll-dots">
+                            <span></span><span></span><span></span><span></span><span></span>
+                        </div>
+                    </div>
+
+                    <div class="project-body">
+                        <div class="project-meta">
+                            <span>Public Opinion Research</span>
+                            <span>03</span>
+                        </div>
+                        <h3>Twaweza – Sauti za Wananchi</h3>
+                        <p>
+                            Contributed to national public opinion surveys examining
+                            governance, social and socio-economic issues in Kenya.
+                        </p>
+                        <div class="tag-row">
+                            <span>National Surveys</span>
+                            <span>Public Opinion</span>
+                            <span>Data Quality</span>
+                            <span>Evidence</span>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="project-card">
+                    <div class="project-visual visual-campaign" aria-hidden="true">
+                        <div class="campaign-arrow">↗</div>
+                        <div class="campaign-lines">
+                            <span>Reach</span>
+                            <span>Effectiveness</span>
+                            <span>Evidence</span>
+                        </div>
+                    </div>
+
+                    <div class="project-body">
+                        <div class="project-meta">
+                            <span>Campaign Evaluation</span>
+                            <span>04</span>
+                        </div>
+                        <h3>Boost Africa Campaign Evaluation</h3>
+                        <p>
+                            Supported an EU/EIB campaign evaluation assessing campaign
+                            reach and effectiveness through structured research and evidence analysis.
+                        </p>
+                        <div class="tag-row">
+                            <span>CATI</span>
+                            <span>Campaign Evaluation</span>
+                            <span>Analysis</span>
+                            <span>Reporting</span>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="project-card">
+                    <div class="project-visual visual-comms" aria-hidden="true">
+                        <div class="comms-orbit">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="comms-core">Insight</div>
+                    </div>
+
+                    <div class="project-body">
+                        <div class="project-meta">
+                            <span>Communications Research</span>
+                            <span>05</span>
+                        </div>
+                        <h3>Lake Turkana Wind Power Evaluation</h3>
+                        <p>
+                            Supported research evaluating communications and public
+                            relations activities to generate evidence for communication strategy development.
+                        </p>
+                        <div class="tag-row">
+                            <span>Stakeholder Insights</span>
+                            <span>Communications</span>
+                            <span>Evaluation</span>
+                            <span>Strategy</span>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="project-card">
+                    <div class="project-visual visual-national" aria-hidden="true">
+                        <div class="national-grid">
+                            <span></span><span></span><span></span><span></span>
+                            <span></span><span></span><span></span><span></span>
+                            <span></span><span></span><span></span><span></span>
+                        </div>
+                    </div>
+
+                    <div class="project-body">
+                        <div class="project-meta">
+                            <span>Research & Evaluation</span>
+                            <span>06</span>
+                        </div>
+                        <h3>National Research & Evaluation Studies</h3>
+                        <p>
+                            Supported national surveys, public opinion studies,
+                            baseline, midline and endline studies across multiple research
+                            and programme contexts.
+                        </p>
+                        <div class="tag-row">
+                            <span>Research Design</span>
+                            <span>Field Coordination</span>
+                            <span>Data Quality</span>
+                            <span>Analysis</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section section-light">
+        <div class="section-shell">
+
+            <div class="split-heading split-heading-light">
+                <div>
+                    <p class="section-kicker">CAREER JOURNEY</p>
+                    <h2>Professional experience</h2>
+                </div>
+                <p>
+                    A progression through health data, monitoring and evaluation,
+                    research delivery and evidence generation.
+                </p>
+            </div>
+
+            <div class="timeline">
+
+                <article class="timeline-item">
+                    <div class="timeline-date">
+                        <span>May 2024</span>
+                        <strong>Present</strong>
+                    </div>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-card-top">
+                            <div>
+                                <span class="timeline-type">Research & Evaluation</span>
+                                <h3>TIFA Research</h3>
+                            </div>
+                            <span class="timeline-role">Research Assistant</span>
+                        </div>
+                        <p>
+                            Supporting end-to-end research and evaluation assignments,
+                            including study design, digital data collection, fieldwork
+                            coordination, data quality assurance, analysis and reporting.
+                        </p>
+                        <div class="tag-row tag-row-light">
+                            <span>Research Design</span>
+                            <span>Field Coordination</span>
+                            <span>Data Quality</span>
+                            <span>Analysis</span>
+                            <span>Reporting</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="timeline-item">
+                    <div class="timeline-date">
+                        <span>Oct 2021</span>
+                        <strong>May 2024</strong>
+                    </div>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-card-top">
+                            <div>
+                                <span class="timeline-type">Monitoring & Evaluation</span>
+                                <h3>HOPE Worldwide Kenya</h3>
+                            </div>
+                            <span class="timeline-role">Data Assistant</span>
+                        </div>
+                        <p>
+                            Supported monitoring, evaluation and learning activities,
+                            indicator tracking, data quality assessments, programme
+                            reporting, beneficiary feedback and data management.
+                        </p>
+                        <div class="tag-row tag-row-light">
+                            <span>M&E</span>
+                            <span>Indicator Tracking</span>
+                            <span>Data Quality</span>
+                            <span>Programme Reporting</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="timeline-item">
+                    <div class="timeline-date">
+                        <span>Nov 2020</span>
+                        <strong>Sep 2021</strong>
+                    </div>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-card-top">
+                            <div>
+                                <span class="timeline-type">Health Data</span>
+                                <h3>LVCT Health</h3>
+                            </div>
+                            <span class="timeline-role">Data Clerk</span>
+                        </div>
+                        <p>
+                            Managed programme data, verification, data quality assessments,
+                            reporting and routine analysis for donor-funded health programmes.
+                        </p>
+                        <div class="tag-row tag-row-light">
+                            <span>Data Management</span>
+                            <span>DQA</span>
+                            <span>Verification</span>
+                            <span>Reporting</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="timeline-item">
+                    <div class="timeline-date">
+                        <span>Feb 2019</span>
+                        <strong>May 2020</strong>
+                    </div>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-card-top">
+                            <div>
+                                <span class="timeline-type">Planning & Strategy</span>
+                                <h3>Kenyatta National Hospital</h3>
+                            </div>
+                            <span class="timeline-role">Planning & Strategy Intern</span>
+                        </div>
+                        <p>
+                            Supported data collection, cleaning, statistical analysis,
+                            reporting and health-service utilisation analysis for strategic
+                            planning and decision-making.
+                        </p>
+                        <div class="tag-row tag-row-light">
+                            <span>Data Collection</span>
+                            <span>Statistical Analysis</span>
+                            <span>Planning</span>
+                            <span>Reporting</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CAPABILITIES -->
+    <section id="capabilities" class="section section-dark">
+        <div class="section-shell">
+
+            <div class="split-heading">
+                <div>
+                    <p class="section-kicker">CAPABILITIES</p>
+                    <h2>Research, M&E & data toolkit</h2>
+                </div>
+                <p>
+                    Practical capabilities built across research delivery, programme
+                    monitoring, data quality, analytics and evidence communication.
+                </p>
+            </div>
+
+            <div class="capability-grid">
+
+                <article class="capability-card">
+                    <span class="capability-icon">01</span>
+                    <h3>Research Delivery</h3>
+                    <p>End-to-end support for quantitative, qualitative and mixed-method studies.</p>
+                    <div class="tag-row">
+                        <span>Survey Design</span>
+                        <span>FGDs</span>
+                        <span>KIIs</span>
+                        <span>Mixed Methods</span>
+                        <span>Impact Evaluation</span>
+                    </div>
+                </article>
+
+                <article class="capability-card">
+                    <span class="capability-icon">02</span>
                     <h3>Monitoring & Evaluation</h3>
-                    <p>
-                        Programme monitoring, evaluations, indicator tracking,
-                        data quality and learning.
-                    </p>
-                </div>
+                    <p>Programme monitoring, indicator tracking, evaluation and learning support.</p>
+                    <div class="tag-row">
+                        <span>Indicator Tracking</span>
+                        <span>Performance Monitoring</span>
+                        <span>M&E</span>
+                        <span>Learning</span>
+                    </div>
+                </article>
 
-                <div class="card">
+                <article class="capability-card">
+                    <span class="capability-icon">03</span>
                     <h3>Data & Analytics</h3>
+                    <p>Data cleaning, analysis, visualisation and decision-ready insight generation.</p>
+                    <div class="tag-row">
+                        <span>Advanced Excel</span>
+                        <span>SPSS</span>
+                        <span>Power BI</span>
+                        <span>Metabase</span>
+                        <span>Google Data Studio</span>
+                    </div>
+                </article>
+
+                <article class="capability-card">
+                    <span class="capability-icon">04</span>
+                    <h3>Digital Data Collection</h3>
+                    <p>Field-ready questionnaire programming and digital data-collection implementation.</p>
+                    <div class="tag-row">
+                        <span>ODK</span>
+                        <span>Kobo Collect</span>
+                        <span>SurveyToGo</span>
+                        <span>SurveyJS</span>
+                        <span>LimeSurvey</span>
+                        <span>EpiData</span>
+                    </div>
+                </article>
+
+                <article class="capability-card">
+                    <span class="capability-icon">05</span>
+                    <h3>Data Quality</h3>
+                    <p>Validation and quality assurance across fieldwork, reporting and programme data.</p>
+                    <div class="tag-row">
+                        <span>DQAs</span>
+                        <span>RDQAs</span>
+                        <span>Validation</span>
+                        <span>Back-checks</span>
+                        <span>Quality Assurance</span>
+                    </div>
+                </article>
+
+                <article class="capability-card">
+                    <span class="capability-icon">06</span>
+                    <h3>Reporting & Evidence</h3>
+                    <p>Clear research narratives for decision-makers, from reports to dashboards.</p>
+                    <div class="tag-row">
+                        <span>Reports</span>
+                        <span>Presentations</span>
+                        <span>Dashboards</span>
+                        <span>Policy Briefs</span>
+                        <span>Data Storytelling</span>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- IMPACT -->
+    <section id="impact" class="section section-light">
+        <div class="section-shell">
+
+            <div class="split-heading split-heading-light">
+                <div>
+                    <p class="section-kicker">IMPACT</p>
+                    <h2>Evidence translated into practical value</h2>
+                </div>
+                <p>
+                    Highlights from research delivery, training, data quality,
+                    reporting and evidence communication.
+                </p>
+            </div>
+
+            <div class="impact-grid-v9">
+
+                <article class="impact-card impact-card-big">
+                    <strong>100+</strong>
+                    <h3>Researchers trained</h3>
                     <p>
-                        Data cleaning, analysis, visualization, dashboards
-                        and insight generation.
+                        Trained and supervised over 100 research assistants and enumerators
+                        on digital data collection, research ethics, field procedures
+                        and quality assurance.
                     </p>
-                </div>
+                </article>
 
-                <div class="card">
-                    <h3>Project Coordination</h3>
+                <article class="impact-card">
+                    <strong>100%</strong>
+                    <h3>Reporting compliance</h3>
                     <p>
-                        Fieldwork coordination, team supervision,
-                        quality assurance and stakeholder engagement.
+                        Achieved full reporting compliance while supporting programme
+                        data management and quality assurance at LVCT Health.
                     </p>
-                </div>
+                </article>
+
+                <article class="impact-card">
+                    <strong>National</strong>
+                    <h3>Research exposure</h3>
+                    <p>
+                        Contributed to national surveys, public opinion studies,
+                        programme evaluations and research assignments.
+                    </p>
+                </article>
+
+                <article class="impact-card">
+                    <strong>DQAs</strong>
+                    <h3>Data quality improvement</h3>
+                    <p>
+                        Strengthened reporting accuracy through validation,
+                        back-checks, cleaning and corrective action follow-up.
+                    </p>
+                </article>
+
+                <article class="impact-card">
+                    <strong>Dashboards</strong>
+                    <h3>Decision support</h3>
+                    <p>
+                        Supported dashboard development and use for monitoring,
+                        reporting and evidence-based decision-making.
+                    </p>
+                </article>
+
+                <article class="impact-card">
+                    <strong>Evidence</strong>
+                    <h3>From data to action</h3>
+                    <p>
+                        Produced reports, presentations, briefs and insights
+                        that translate complex data into practical recommendations.
+                    </p>
+                </article>
 
             </div>
-
-        </section>
-
-
-       <section id="experience">
-
-    <div class="experience-heading">
-        <p class="section-kicker">CAREER JOURNEY</p>
-        <h2>Professional Experience</h2>
-
-        <p>
-            Over five years of experience supporting research, monitoring,
-            evaluation, data quality, programme learning and evidence-based
-            decision-making.
-        </p>
-    </div>
+        </div>
+    </section>
 
 
-    <div class="timeline">
 
-        <!-- TIFA -->
-        <article class="timeline-item">
+    <!-- EDUCATION & PROFESSIONAL DEVELOPMENT -->
+    <section id="education" class="section education-section">
+        <div class="section-shell">
 
-            <div class="timeline-marker">
-                <span></span>
-            </div>
-
-            <div class="timeline-period">
-                <span>May 2024</span>
-                <strong>Present</strong>
-            </div>
-
-            <div class="timeline-content">
-
-                <div class="timeline-top">
-                    <div>
-                        <span class="timeline-type">Research & Evaluation</span>
-                        <h3>TIFA Research</h3>
-                    </div>
-
-                    <span class="timeline-role">
-                        Research Assistant
-                    </span>
-                </div>
-
-                <p>
-                    Supporting end-to-end research and evaluation assignments,
-                    including study design, digital data collection, fieldwork
-                    coordination, data quality assurance, analysis and reporting.
-                </p>
-
-                <div class="timeline-tags">
-                    <span>Research Design</span>
-                    <span>Field Coordination</span>
-                    <span>Data Quality</span>
-                    <span>Analysis</span>
-                    <span>Reporting</span>
-                </div>
-
-            </div>
-
-        </article>
-
-
-        <!-- HOPE WORLDWIDE KENYA -->
-        <article class="timeline-item">
-
-            <div class="timeline-marker">
-                <span></span>
-            </div>
-
-            <div class="timeline-period">
-                <span>Oct 2021</span>
-                <strong>May 2024</strong>
-            </div>
-
-            <div class="timeline-content">
-
-                <div class="timeline-top">
-                    <div>
-                        <span class="timeline-type">Monitoring & Evaluation</span>
-                        <h3>HOPE Worldwide Kenya</h3>
-                    </div>
-
-                    <span class="timeline-role">
-                        Data Assistant
-                    </span>
+            <div class="split-heading education-heading">
+                <div>
+                    <p class="section-kicker">EDUCATION & DEVELOPMENT</p>
+                    <h2>Academic foundation, strengthened by continuous learning.</h2>
                 </div>
 
                 <p>
-                    Supported monitoring, evaluation and learning activities,
-                    indicator tracking, data quality assessments, programme
-                    reporting, beneficiary feedback and data management.
+                    Formal training in economics and statistics, complemented by
+                    professional development in monitoring and evaluation, project
+                    management, health information and responsible programme practice.
                 </p>
-
-                <div class="timeline-tags">
-                    <span>M&E</span>
-                    <span>Indicator Tracking</span>
-                    <span>Data Quality</span>
-                    <span>Programme Reporting</span>
-                </div>
-
             </div>
 
-        </article>
+            <div class="education-layout">
 
-
-        <!-- LVCT HEALTH -->
-        <article class="timeline-item">
-
-            <div class="timeline-marker">
-                <span></span>
-            </div>
-
-            <div class="timeline-period">
-                <span>Nov 2020</span>
-                <strong>Sep 2021</strong>
-            </div>
-
-            <div class="timeline-content">
-
-                <div class="timeline-top">
-                    <div>
-                        <span class="timeline-type">Health Data</span>
-                        <h3>LVCT Health</h3>
+                <article class="degree-card">
+                    <div class="degree-top">
+                        <span class="education-label">ACADEMIC QUALIFICATION</span>
+                        <span class="education-year">2015 - 2019</span>
                     </div>
 
-                    <span class="timeline-role">
-                        Data Clerk
-                    </span>
-                </div>
+                    <div class="degree-mark" aria-hidden="true">BSc</div>
 
-                <p>
-                    Managed programme data, verification, data quality assessments,
-                    reporting and routine analysis for donor-funded health programmes.
-                </p>
+                    <h3>Bachelor of Economics and Statistics</h3>
 
-                <div class="timeline-tags">
-                    <span>Data Management</span>
-                    <span>DQA</span>
-                    <span>Verification</span>
-                    <span>Reporting</span>
-                </div>
+                    <p class="institution">University of Nairobi</p>
 
-            </div>
-
-        </article>
+                    <div class="degree-footer">
+                        <span>Second Class Honours</span>
+                        <span>Economics • Statistics • Evidence</span>
+                    </div>
+                </article>
 
 
-        <!-- KNH -->
-        <article class="timeline-item">
+                <div class="development-panel">
 
-            <div class="timeline-marker">
-                <span></span>
-            </div>
-
-            <div class="timeline-period">
-                <span>Feb 2019</span>
-                <strong>May 2020</strong>
-            </div>
-
-            <div class="timeline-content">
-
-                <div class="timeline-top">
-                    <div>
-                        <span class="timeline-type">Planning & Strategy</span>
-                        <h3>Kenyatta National Hospital</h3>
+                    <div class="development-heading">
+                        <span class="education-label">PROFESSIONAL DEVELOPMENT</span>
+                        <h3>Continuous professional learning</h3>
                     </div>
 
-                    <span class="timeline-role">
-                        Planning & Strategy Intern
-                    </span>
-                </div>
+                    <div class="development-list">
 
-                <p>
-                    Supported data collection, cleaning, statistical analysis,
-                    reporting and health-service utilisation analysis for strategic
-                    planning and decision-making.
-                </p>
+                        <article class="development-item">
+                            <div>
+                                <h4>Monitoring and Evaluation</h4>
+                                <p>KIMS College</p>
+                            </div>
+                            <span>Jan 2026 • Ongoing</span>
+                        </article>
 
-                <div class="timeline-tags">
-                    <span>Data Collection</span>
-                    <span>Statistical Analysis</span>
-                    <span>Planning</span>
-                    <span>Reporting</span>
+                        <article class="development-item">
+                            <div>
+                                <h4>ART Cohort Analysis</h4>
+                                <p>NASCOP</p>
+                            </div>
+                            <span>Sep 2021</span>
+                        </article>
+
+                        <article class="development-item">
+                            <div>
+                                <h4>HIV Monitoring and Evaluation Tools Training</h4>
+                                <p>NASCOP</p>
+                            </div>
+                            <span>Sep 2020</span>
+                        </article>
+
+                        <article class="development-item">
+                            <div>
+                                <h4>Gender and Sexual Diversity</h4>
+                                <p>Global Health eLearning</p>
+                            </div>
+                            <span>Sep 2020</span>
+                        </article>
+
+                        <article class="development-item">
+                            <div>
+                                <h4>Project Management</h4>
+                                <p>University of Washington</p>
+                            </div>
+                            <span>Aug 2020</span>
+                        </article>
+
+                    </div>
+
                 </div>
 
             </div>
 
-        </article>
+        </div>
+    </section>
 
-    </div>
 
-</section>
+    <!-- CONTACT -->
+    <section id="contact" class="section contact-section">
+        <div class="section-shell contact-grid">
 
-<section id="projects" class="projects-section">
+            <div class="contact-copy">
+                <p class="section-kicker">LET'S CONNECT</p>
+                <h2>Have a research, M&E or data challenge?</h2>
+                <p>
+                    I am open to research collaborations, consulting opportunities
+                    and assignments that translate evidence into clearer decisions.
+                </p>
 
-    <div class="projects-heading">
+                <div class="contact-actions">
+                    <a href="mailto:mwangimargaret034@gmail.com" class="btn btn-primary">Email Me →</a>
+                    <a href="Margaret-Nangorombi-Mwangi-CV.pdf" class="btn btn-ghost" download>Download CV ↓</a>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-row">
+                    <strong>Email</strong>
+                    <a href="mailto:mwangimargaret034@gmail.com">mwangimargaret034@gmail.com</a>
+                </div>
+
+                <div class="contact-row">
+                    <strong>LinkedIn</strong>
+                    <a href="https://www.linkedin.com/in/margaret-nangorombi-mwangi-8ba0b8177/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Margaret Nangorombi Mwangi ↗
+                    </a>
+                </div>
+
+                <div class="contact-row">
+                    <strong>GitHub</strong>
+                    <a href="https://github.com/margaretnangorombi"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        @margaretnangorombi ↗
+                    </a>
+                </div>
+
+                <div class="contact-row">
+                    <strong>Focus</strong>
+                    <span>Research • M&E • Data • Evidence & Insights</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+
+<footer class="site-footer">
+    <div class="footer-shell">
+        <p>© 2026 Margaret Nangorombi Mwangi</p>
 
         <div>
-            <p class="section-kicker">SELECTED WORK</p>
-            <h2>Research & Evaluation Portfolio</h2>
+            <a href="#top">Back to top ↑</a>
+            <a href="mailto:mwangimargaret034@gmail.com">Email</a>
+            <a href="https://github.com/margaretnangorombi" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/margaret-nangorombi-mwangi-8ba0b8177/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
-
-        <p class="projects-intro">
-            Selected assignments demonstrating my experience across impact evaluation,
-            public opinion research, market research, communications evaluation and
-            national-level studies.
-        </p>
-
     </div>
-
-
-    <div class="project-grid">
-
-
-        <!-- PROJECT 01 -->
-        <article class="project-card project-featured">
-
-            <div class="project-top">
-                <span class="project-category">Impact Evaluation</span>
-                <span class="project-number">01</span>
-            </div>
-
-            <h3>KCB Women in Business Impact Evaluation</h3>
-
-            <p class="project-description">
-                Supported research examining the experiences and outcomes of women
-                entrepreneurs participating in KCB's Women in Business programme.
-            </p>
-
-            <div class="project-details">
-
-                <div>
-                    <span>Research Area</span>
-                    <strong>Financial Inclusion</strong>
-                </div>
-
-                <div>
-                    <span>Approach</span>
-                    <strong>Mixed Methods</strong>
-                </div>
-
-                <div>
-                    <span>Contribution</span>
-                    <strong>Research, Analysis & Reporting</strong>
-                </div>
-
-            </div>
-
-            <div class="project-tags">
-                <span>Impact Evaluation</span>
-                <span>Qualitative Research</span>
-                <span>Quantitative Research</span>
-                <span>Financial Inclusion</span>
-            </div>
-
-        </article>
-
-
-        <!-- PROJECT 02 -->
-        <article class="project-card">
-
-            <div class="project-top">
-                <span class="project-category">Market Research</span>
-                <span class="project-number">02</span>
-            </div>
-
-            <h3>KCB Brand Asset Evaluation Study</h3>
-
-            <p class="project-description">
-                Contributed to research assessing brand visibility, sponsorship impact
-                and customer engagement to support strategic decision-making.
-            </p>
-
-            <div class="project-tags">
-                <span>Consumer Insights</span>
-                <span>Brand Research</span>
-                <span>Data Analysis</span>
-                <span>Reporting</span>
-            </div>
-
-        </article>
-
-
-        <!-- PROJECT 03 -->
-        <article class="project-card">
-
-            <div class="project-top">
-                <span class="project-category">Public Opinion Research</span>
-                <span class="project-number">03</span>
-            </div>
-
-            <h3>Twaweza – Sauti za Wananchi</h3>
-
-            <p class="project-description">
-                Contributed to national public opinion surveys examining governance,
-                social and socio-economic issues in Kenya.
-            </p>
-
-            <div class="project-tags">
-                <span>National Surveys</span>
-                <span>Public Opinion</span>
-                <span>Data Quality</span>
-                <span>Evidence Generation</span>
-            </div>
-
-        </article>
-
-
-        <!-- PROJECT 04 -->
-        <article class="project-card">
-
-            <div class="project-top">
-                <span class="project-category">Campaign Evaluation</span>
-                <span class="project-number">04</span>
-            </div>
-
-            <h3>Boost Africa Campaign Evaluation</h3>
-
-            <p class="project-description">
-                Supported an EU/EIB campaign evaluation assessing campaign reach
-                and effectiveness through structured research and evidence analysis.
-            </p>
-
-            <div class="project-tags">
-                <span>CATI Research</span>
-                <span>Campaign Evaluation</span>
-                <span>Analysis</span>
-                <span>Reporting</span>
-            </div>
-
-        </article>
-
-
-        <!-- PROJECT 05 -->
-        <article class="project-card">
-
-            <div class="project-top">
-                <span class="project-category">Communications Research</span>
-                <span class="project-number">05</span>
-            </div>
-
-            <h3>Lake Turkana Wind Power Evaluation</h3>
-
-            <p class="project-description">
-                Supported research evaluating communications and public relations
-                activities to generate evidence for communication strategy development.
-            </p>
-
-            <div class="project-tags">
-                <span>Stakeholder Insights</span>
-                <span>Communications</span>
-                <span>Evaluation</span>
-                <span>Strategy</span>
-            </div>
-
-        </article>
-
-
-        <!-- PROJECT 06 -->
-        <article class="project-card">
-
-            <div class="project-top">
-                <span class="project-category">Research & Evaluation</span>
-                <span class="project-number">06</span>
-            </div>
-
-            <h3>National Research & Evaluation Studies</h3>
-
-            <p class="project-description">
-                Supported national surveys, public opinion studies, baseline,
-                midline and endline studies across multiple research and programme contexts.
-            </p>
-
-            <div class="project-tags">
-                <span>Research Design</span>
-                <span>Field Coordination</span>
-                <span>Data Quality</span>
-                <span>Analysis</span>
-            </div>
-
-        </article>
-
-
-    </div>
-
-</section>
-
-        <section id="tools">
-
-    <h2>Technical Skills & Tools</h2>
-
-    <p>
-        Tools and platforms I use across research, monitoring and evaluation,
-        data collection, analysis, reporting and evidence generation.
-    </p>
-
-    <div class="cards">
-
-        <div class="card">
-            <h3>Data Analysis & Visualization</h3>
-            <p>
-                Advanced Excel • SPSS • Power BI • Metabase •
-                Google Data Studio
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Digital Data Collection</h3>
-            <p>
-                ODK • Kobo Collect • SurveyToGo • SurveyJS •
-                LimeSurvey • EpiData
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Research & Evaluation</h3>
-            <p>
-                Survey Design • FGDs • KIIs • Mixed-Methods Research •
-                Impact Evaluation • Baseline, Midline & Endline Studies
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Monitoring & Data Quality</h3>
-            <p>
-                Indicator Tracking • DQAs • RDQAs • Data Validation •
-                Performance Monitoring • Quality Assurance
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Field & Project Management</h3>
-            <p>
-                Fieldwork Coordination • Enumerator Training •
-                Team Supervision • Stakeholder Engagement
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Reporting & Knowledge Products</h3>
-            <p>
-                Research Reports • Presentations • Dashboards •
-                Policy Briefs • Insight Reports • Data Storytelling
-            </p>
-        </div>
-
-    </div>
-
-</section>
-
-<section id="achievements">
-
-    <h2>Key Achievements</h2>
-
-    <p>
-        Highlights from my work across research, monitoring and evaluation,
-        data quality and programme reporting.
-    </p>
-
-    <div class="cards">
-
-        <div class="card">
-            <h3>50+ Researchers Trained</h3>
-            <p>
-                Trained and supervised research assistants and enumerators
-                on digital data collection, research ethics, field procedures
-                and quality assurance.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>National-Level Research</h3>
-            <p>
-                Contributed to national surveys, public opinion studies,
-                programme evaluations and research assignments used to
-                inform policy, programme and business decisions.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Data Quality Improvement</h3>
-            <p>
-                Strengthened reporting accuracy through DQAs, RDQAs,
-                validation, back-checks, data cleaning and corrective
-                action follow-up.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Dashboard Development</h3>
-            <p>
-                Supported development and use of dashboards to improve
-                programme monitoring, reporting and evidence-based
-                decision-making.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>100% Reporting Compliance</h3>
-            <p>
-                Achieved full reporting compliance while supporting
-                programme data management and quality assurance at
-                LVCT Health.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Evidence to Action</h3>
-            <p>
-                Produced reports, presentations, briefs and insights that
-                translate complex data into practical recommendations for
-                decision-makers.
-            </p>
-        </div>
-
-    </div>
-
-</section>
-        
-    <section id="contact">
-
-    <h2>Let's Connect</h2>
-
-    <p>
-        Interested in research, monitoring and evaluation, data,
-        evidence generation or project collaboration? Let's connect.
-    </p>
-
-    <div class="contact-links">
-
-        <a href="mailto:mwangimargaret034@gmail.com">
-            <strong>Email</strong>
-            <span>mwangimargaret034@gmail.com</span>
-        </a>
-
-        <a href="https://www.linkedin.com/in/margaret-nangorombi-mwangi-8ba0b8177/"
-           target="_blank"
-           rel="noopener noreferrer">
-            <strong>LinkedIn</strong>
-            <span>Margaret Nangorombi Mwangi</span>
-        </a>
-
-        <a href="https://github.com/margaretnangorombi"
-           target="_blank"
-           rel="noopener noreferrer">
-            <strong>GitHub</strong>
-            <span>@margaretnangorombi</span>
-        </a>
-
-        <a href="Margaret-Nangorombi-Mwangi-CV.pdf"
-           download>
-            <strong>Curriculum Vitae</strong>
-            <span>Download my CV</span>
-        </a>
-
-    </div>
-
-</section>
-
-    </main>
-
-
-   <footer>
-
-    <div class="footer-content">
-
-        <p>
-            © 2026 Margaret Nangorombi Mwangi
-        </p>
-
-        <div class="footer-links">
-
-          <a href="https://www.linkedin.com/in/margaret-nangorombi-mwangi-8ba0b8177/"
-               target="_blank"
-               rel="noopener noreferrer">
-                LinkedIn
-            </a>
-
-            <a href="https://github.com/margaretnangorombi"
-               target="_blank"
-               rel="noopener noreferrer">
-                GitHub
-            </a>
-
-            <a href="mailto:mwangimargaret034@gmail.com">
-                Email
-            </a>
-
-            <a href="#">
-                Back to Top ↑
-            </a>
-
-        </div>
-
-    </div>
-
 </footer>
 
-<script>
-    const sections = document.querySelectorAll(
-        "#about, #expertise, #experience, #projects, #tools, #achievements, #contact"
-    );
 
-    const navLinks = document.querySelectorAll("nav a");
+<script>
+    const navLinks = document.querySelectorAll('.nav-links a');
+    const sections = document.querySelectorAll('#about, #projects, #experience, #capabilities, #impact, #education, #contact');
 
     function updateActiveNav() {
-        let current = "";
+        let current = '';
 
         sections.forEach(section => {
-            const sectionTop = section.offsetTop - 180;
-
-            if (window.scrollY >= sectionTop) {
-                current = section.getAttribute("id");
+            const top = section.offsetTop - 180;
+            if (window.scrollY >= top) {
+                current = section.id;
             }
         });
 
         navLinks.forEach(link => {
-            link.classList.remove("active");
-
-            if (link.getAttribute("href") === "#" + current) {
-                link.classList.add("active");
-            }
+            link.classList.toggle('active', link.getAttribute('href') === '#' + current);
         });
     }
 
-    window.addEventListener("scroll", updateActiveNav);
-
+    window.addEventListener('scroll', updateActiveNav, { passive: true });
     updateActiveNav();
 </script>
 
