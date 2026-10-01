@@ -442,7 +442,7 @@ section:not(.hero) > h2::before {
     grid-template-columns: 1fr 1fr;
     gap: 60px;
     align-items: end;
-    margin-bottom: 45px;
+  margin-bottom: 32px;
 }
 
 .section-kicker {
@@ -476,7 +476,7 @@ section:not(.hero) > h2::before {
     position: relative;
     display: flex;
     flex-direction: column;
-    min-height: 340px;
+    mmin-height: 300px;
     padding: 32px;
     border: 1px solid #e2e8f0;
     border-radius: 18px;
@@ -512,14 +512,14 @@ section:not(.hero) > h2::before {
     grid-column: span 2;
     min-height: auto;
     background: linear-gradient(135deg, #f8fbff 0%, #ffffff 55%, #eff6ff 100%);
-    padding: 38px;
+   padding: 32px 36px;
 }
 
 .project-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 26px;
+   margin-bottom: 18px;
 }
 
 .project-category {
@@ -554,17 +554,17 @@ section:not(.hero) > h2::before {
 
 .project-description {
     color: #64748b;
-    line-height: 1.75;
-    margin-bottom: 25px;
-    max-width: 760px;
+    line-height: 1.7;
+    margin-bottom: 18px;
+    max-width: 900px;
 }
 
 .project-details {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    padding: 22px 0;
-    margin-bottom: 22px;
+    padding: 16px 0;
+    margin-bottom: 16px;
     border-top: 1px solid #e2e8f0;
     border-bottom: 1px solid #e2e8f0;
 }
