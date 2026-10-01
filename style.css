@@ -442,7 +442,7 @@ section:not(.hero) > h2::before {
     grid-template-columns: 1fr 1fr;
     gap: 60px;
     align-items: end;
-  margin-bottom: 32px;
+    margin-bottom: 45px;
 }
 
 .section-kicker {
@@ -476,7 +476,7 @@ section:not(.hero) > h2::before {
     position: relative;
     display: flex;
     flex-direction: column;
-    mmin-height: 300px;
+    min-height: 340px;
     padding: 32px;
     border: 1px solid #e2e8f0;
     border-radius: 18px;
@@ -512,14 +512,14 @@ section:not(.hero) > h2::before {
     grid-column: span 2;
     min-height: auto;
     background: linear-gradient(135deg, #f8fbff 0%, #ffffff 55%, #eff6ff 100%);
-   padding: 32px 36px;
+    padding: 38px;
 }
 
 .project-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
-   margin-bottom: 18px;
+    margin-bottom: 26px;
 }
 
 .project-category {
@@ -554,17 +554,17 @@ section:not(.hero) > h2::before {
 
 .project-description {
     color: #64748b;
-    line-height: 1.7;
-    margin-bottom: 18px;
-    max-width: 900px;
+    line-height: 1.75;
+    margin-bottom: 25px;
+    max-width: 760px;
 }
 
 .project-details {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    padding: 16px 0;
-    margin-bottom: 16px;
+    padding: 22px 0;
+    margin-bottom: 22px;
     border-top: 1px solid #e2e8f0;
     border-bottom: 1px solid #e2e8f0;
 }
@@ -605,6 +605,7 @@ section:not(.hero) > h2::before {
     font-weight: 600;
 }
 
+
 /* ================================
    PROFESSIONAL EXPERIENCE TIMELINE
    ================================ */
@@ -634,9 +635,6 @@ section:not(.hero) > h2::before {
     line-height: 1.8;
 }
 
-
-/* TIMELINE */
-
 .timeline {
     position: relative;
 }
@@ -651,9 +649,6 @@ section:not(.hero) > h2::before {
     background: #dbeafe;
 }
 
-
-/* TIMELINE ITEM */
-
 .timeline-item {
     position: relative;
     display: grid;
@@ -665,9 +660,6 @@ section:not(.hero) > h2::before {
 .timeline-item:last-child {
     margin-bottom: 0;
 }
-
-
-/* DATES */
 
 .timeline-period {
     text-align: right;
@@ -692,9 +684,6 @@ section:not(.hero) > h2::before {
     margin-top: 2px;
 }
 
-
-/* TIMELINE DOT */
-
 .timeline-marker {
     position: relative;
     display: flex;
@@ -712,18 +701,12 @@ section:not(.hero) > h2::before {
     box-shadow: 0 0 0 2px #bfdbfe;
 }
 
-
-/* EXPERIENCE CARD */
-
 .timeline-content {
     background: #ffffff;
     border: 1px solid #e2e8f0;
     border-radius: 16px;
     padding: 28px 30px;
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease,
-        border-color 0.25s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
 .timeline-content:hover {
@@ -731,9 +714,6 @@ section:not(.hero) > h2::before {
     border-color: #bfdbfe;
     box-shadow: 0 15px 35px rgba(15, 23, 42, 0.07);
 }
-
-
-/* CARD HEADER */
 
 .timeline-top {
     display: flex;
@@ -770,17 +750,11 @@ section:not(.hero) > h2::before {
     white-space: nowrap;
 }
 
-
-/* DESCRIPTION */
-
 .timeline-content > p {
     color: #64748b;
     line-height: 1.75;
     margin-bottom: 20px;
 }
-
-
-/* SKILL TAGS */
 
 .timeline-tags {
     display: flex;
@@ -797,6 +771,7 @@ section:not(.hero) > h2::before {
     font-size: 0.72rem;
     font-weight: 600;
 }
+
 /* ================================
    SECTION SEPARATION
    ================================ */
@@ -949,45 +924,7 @@ a:focus-visible {
    TABLET / MOBILE
    ================================ */
 
-@media (max-width: 768px) {.timeline::before {
-    left: 18px;
-}
-
-.timeline-item {
-    grid-template-columns: 38px 1fr;
-    gap: 12px;
-}
-
-.timeline-period {
-    grid-column: 2;
-    text-align: left;
-    padding: 0 0 5px;
-    display: flex;
-    gap: 6px;
-}
-
-.timeline-period span,
-.timeline-period strong {
-    display: inline;
-}
-
-.timeline-marker {
-    grid-column: 1;
-    grid-row: 1 / span 2;
-}
-
-.timeline-content {
-    grid-column: 2;
-}
-
-.timeline-top {
-    flex-direction: column;
-    gap: 8px;
-}
-
-.timeline-role {
-    align-self: flex-start;
-}
+@media (max-width: 768px) {
     nav {
         gap: 15px;
     }
@@ -1059,6 +996,51 @@ a:focus-visible {
     }
 
 
+
+    .experience-heading {
+        margin-bottom: 40px;
+    }
+
+    .timeline::before {
+        left: 18px;
+    }
+
+    .timeline-item {
+        grid-template-columns: 38px 1fr;
+        gap: 12px;
+    }
+
+    .timeline-period {
+        grid-column: 2;
+        text-align: left;
+        padding: 0 0 5px;
+        display: flex;
+        gap: 6px;
+    }
+
+    .timeline-period span,
+    .timeline-period strong {
+        display: inline;
+    }
+
+    .timeline-marker {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+    }
+
+    .timeline-content {
+        grid-column: 2;
+    }
+
+    .timeline-top {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .timeline-role {
+        align-self: flex-start;
+    }
+
     .projects-heading {
         grid-template-columns: 1fr;
         gap: 15px;
@@ -1102,48 +1084,7 @@ a:focus-visible {
    SMALL PHONES
    ================================ */
 
-@media (max-width: 480px) {.experience-heading h2 {
-    font-size: 1.8rem;
-}
-
-.experience-heading {
-    margin-bottom: 35px;
-}
-
-.timeline::before {
-    left: 12px;
-}
-
-.timeline-item {
-    grid-template-columns: 26px 1fr;
-    gap: 10px;
-    margin-bottom: 24px;
-}
-
-.timeline-marker {
-    padding-top: 18px;
-}
-
-.timeline-marker span {
-    width: 13px;
-    height: 13px;
-}
-
-.timeline-content {
-    padding: 22px 20px;
-}
-
-.timeline-content h3 {
-    font-size: 1.15rem;
-}
-
-.timeline-content > p {
-    font-size: 0.92rem;
-}
-
-.timeline-role {
-    white-space: normal;
-}
+@media (max-width: 480px) {
     section {
         padding: 70px 20px;
     }
@@ -1234,6 +1175,50 @@ a:focus-visible {
         border-bottom: none;
     }
 
+
+
+    .experience-heading h2 {
+        font-size: 1.8rem;
+    }
+
+    .experience-heading {
+        margin-bottom: 35px;
+    }
+
+    .timeline::before {
+        left: 12px;
+    }
+
+    .timeline-item {
+        grid-template-columns: 26px 1fr;
+        gap: 10px;
+        margin-bottom: 24px;
+    }
+
+    .timeline-marker {
+        padding-top: 18px;
+    }
+
+    .timeline-marker span {
+        width: 13px;
+        height: 13px;
+    }
+
+    .timeline-content {
+        padding: 22px 20px;
+    }
+
+    .timeline-content h3 {
+        font-size: 1.15rem;
+    }
+
+    .timeline-content > p {
+        font-size: 0.92rem;
+    }
+
+    .timeline-role {
+        white-space: normal;
+    }
 
     .projects-heading h2 {
         font-size: 1.8rem;
