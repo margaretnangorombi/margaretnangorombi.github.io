@@ -1036,6 +1036,131 @@ a {
     z-index: 2;
 }
 
+
+.visual-school-baseline,
+.visual-youth-insights,
+.visual-market-chain,
+.visual-cosmetics {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:
+        radial-gradient(circle at 30% 20%, rgba(56, 189, 248, 0.12), transparent 38%),
+        var(--navy-900);
+}
+
+.baseline-path {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 310px;
+}
+
+.baseline-path span {
+    padding: 8px 11px;
+    border-radius: 999px;
+    border: 1px solid rgba(103, 232, 249, 0.22);
+    color: var(--cyan-300);
+    font-size: 0.67rem;
+    font-weight: 800;
+}
+
+.baseline-core {
+    position: absolute;
+    bottom: 24px;
+    color: var(--white);
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+
+.youth-device {
+    font-size: 5rem;
+    line-height: 1;
+    color: var(--blue-400);
+    opacity: 0.9;
+}
+
+.youth-signals {
+    position: absolute;
+    top: 58px;
+    right: 34%;
+    display: flex;
+    gap: 5px;
+}
+
+.youth-signals span {
+    width: 7px;
+    border-radius: 6px;
+    background: var(--cyan-300);
+}
+
+.youth-signals span:nth-child(1) { height: 14px; }
+.youth-signals span:nth-child(2) { height: 24px; }
+.youth-signals span:nth-child(3) { height: 34px; }
+
+.youth-label {
+    position: absolute;
+    bottom: 26px;
+    color: var(--cyan-300);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+}
+
+.visual-market-chain {
+    flex-direction: column;
+    gap: 0;
+}
+
+.chain-node {
+    min-width: 110px;
+    text-align: center;
+    padding: 9px 14px;
+    border-radius: 10px;
+    border: 1px solid rgba(103, 232, 249, 0.20);
+    background: rgba(59, 130, 246, 0.08);
+    color: var(--white);
+    font-size: 0.78rem;
+    font-weight: 800;
+}
+
+.chain-line {
+    width: 2px;
+    height: 23px;
+    background: linear-gradient(var(--blue-400), var(--cyan-300));
+    opacity: 0.8;
+}
+
+.beauty-bars {
+    height: 155px;
+    display: flex;
+    align-items: flex-end;
+    gap: 24px;
+}
+
+.beauty-bars span {
+    width: 45px;
+    border-radius: 10px 10px 3px 3px;
+    background: linear-gradient(180deg, var(--cyan-300), var(--blue-500));
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.14);
+}
+
+.beauty-labels {
+    position: absolute;
+    bottom: 24px;
+    display: flex;
+    gap: 37px;
+}
+
+.beauty-labels span {
+    color: var(--muted-dark);
+    font-size: 0.68rem;
+    font-weight: 700;
+}
+
 /* =========================================================
    EXPERIENCE TIMELINE
    ========================================================= */
@@ -2129,8 +2254,9 @@ a:focus-visible {
                 <p>
                     An anonymised selection of assignments showing the research work
                     undertaken, my contribution and the practical milestones delivered
-                    across financial services, public opinion, development programmes,
-                    communications and multi-sector studies.
+                    across financial services, consumer markets, food and nutrition,
+                    youth research, public opinion, development programmes and
+                    multi-sector studies.
                 </p>
             </div>
 
@@ -2594,6 +2720,305 @@ a:focus-visible {
                             <span>Team Training</span>
                             <span>Recruitment</span>
                             <span>FGD</span>
+                            <span>Report Writing</span>
+                        </div>
+                    </div>
+                </article>
+
+
+                <!-- 08 -->
+                <article class="project-card">
+                    <div class="project-visual visual-school-baseline" aria-hidden="true">
+                        <div class="baseline-path">
+                            <span>Exposure</span>
+                            <span>Awareness</span>
+                            <span>Attitudes</span>
+                            <span>Trial</span>
+                            <span>Adoption</span>
+                        </div>
+                        <div class="baseline-core">Baseline</div>
+                    </div>
+
+                    <div class="project-body">
+                        <div class="project-meta">
+                            <span>Education • Nutrition • Behaviour Change</span>
+                            <span>08</span>
+                        </div>
+
+                        <h3>School Feeding Behaviour-Change Baseline Study</h3>
+
+                        <p>
+                            A multi-stakeholder baseline examining awareness, attitudes and
+                            readiness around the transition from refined foods to fortified
+                            whole-grain foods within school feeding programmes.
+                        </p>
+
+                        <div class="project-proof-grid project-proof-stack">
+                            <div class="project-proof">
+                                <span>WORK DONE</span>
+                                <p>
+                                    Contributed to report writing and insight generation,
+                                    translating survey findings into clear narratives,
+                                    implications and decision-ready takeaways.
+                                </p>
+                            </div>
+
+                            <div class="project-proof milestone">
+                                <span>MILESTONE / VALUE</span>
+                                <p>
+                                    Helped turn findings from 698 respondents across 19 schools
+                                    into an evidence-based baseline showing where awareness was
+                                    already strong and where adoption, knowledge and sustained
+                                    behaviour still required programme attention.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="case-study-box">
+                            <span class="case-study-label">CASE STUDY</span>
+                            <p>
+                                The study covered learners, parents, cooks and school
+                                administrators across seven counties. Reporting was structured
+                                around a behaviour-change pathway moving from exposure and
+                                awareness through attitudes, trial, adoption and
+                                institutionalisation. The analysis showed that awareness of
+                                whole-grain foods was already high across stakeholder groups,
+                                shifting the programme challenge from simple awareness creation
+                                toward deeper knowledge, positive attitudes and sustained
+                                consumption.
+                            </p>
+                        </div>
+
+                        <div class="tag-row">
+                            <span>Report Writing</span>
+                            <span>Insight Generation</span>
+                            <span>Baseline Study</span>
+                            <span>Behaviour Change</span>
+                            <span>Education Research</span>
+                        </div>
+                    </div>
+                </article>
+
+
+                <!-- 09 -->
+                <article class="project-card">
+                    <div class="project-visual visual-youth-insights" aria-hidden="true">
+                        <div class="youth-device">◫</div>
+                        <div class="youth-signals">
+                            <span></span><span></span><span></span>
+                        </div>
+                        <div class="youth-label">Future Consumers</div>
+                    </div>
+
+                    <div class="project-body">
+                        <div class="project-meta">
+                            <span>Youth Research • Technology • Consumer Insights</span>
+                            <span>09</span>
+                        </div>
+
+                        <h3>Children, Households & Future Consumer Trends Study</h3>
+
+                        <p>
+                            A national study exploring how a new generation of children
+                            interacts with technology, brands, household purchasing,
+                            learning, money, social influence and future opportunities.
+                        </p>
+
+                        <div class="project-proof-grid project-proof-stack">
+                            <div class="project-proof">
+                                <span>WORK DONE</span>
+                                <p>
+                                    Contributed to report writing and insight generation,
+                                    interpreting quantitative and qualitative findings and
+                                    translating them into clear sector and decision implications.
+                                </p>
+                            </div>
+
+                            <div class="project-proof milestone">
+                                <span>MILESTONE / VALUE</span>
+                                <p>
+                                    Helped transform a large, multi-topic dataset into
+                                    decision-ready narratives on digital behaviour, device
+                                    access, family influence, brand engagement, education and
+                                    emerging consumer opportunities.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="case-study-box">
+                            <span class="case-study-label">CASE STUDY</span>
+                            <p>
+                                The research combined child and parent perspectives to
+                                understand everyday digital life and household influence.
+                                Reporting highlighted that access to technology is still
+                                strongly shared through family devices, while personal
+                                smartphone ownership increases with age. Regional differences
+                                were also more pronounced than gender differences in several
+                                areas, creating distinct implications for digital engagement,
+                                education, technology products and future-market strategies.
+                            </p>
+                        </div>
+
+                        <div class="tag-row">
+                            <span>Report Writing</span>
+                            <span>Insight Generation</span>
+                            <span>Youth Research</span>
+                            <span>Digital Behaviour</span>
+                            <span>Consumer Trends</span>
+                        </div>
+                    </div>
+                </article>
+
+
+                <!-- 10 -->
+                <article class="project-card">
+                    <div class="project-visual visual-market-chain" aria-hidden="true">
+                        <div class="chain-node">Consumer</div>
+                        <div class="chain-line"></div>
+                        <div class="chain-node">HORECA</div>
+                        <div class="chain-line"></div>
+                        <div class="chain-node">Trade</div>
+                    </div>
+
+                    <div class="project-body">
+                        <div class="project-meta">
+                            <span>Food Market Research • Value Chain • Consumer Demand</span>
+                            <span>10</span>
+                        </div>
+
+                        <h3>Fish Consumption & Market Development Study</h3>
+
+                        <p>
+                            A multi-audience market study examining fish consumption,
+                            awareness, product preferences, supply-chain constraints,
+                            distribution channels and opportunities to expand demand for
+                            an under-consumed fish category.
+                        </p>
+
+                        <div class="project-proof-grid project-proof-stack">
+                            <div class="project-proof">
+                                <span>WORK DONE</span>
+                                <p>
+                                    Contributed to questionnaire design; recruited and trained
+                                    the data-collection team; managed fieldwork delivery and
+                                    project coordination; and supported report writing and
+                                    synthesis of findings.
+                                </p>
+                            </div>
+
+                            <div class="project-proof milestone">
+                                <span>MILESTONE / VALUE</span>
+                                <p>
+                                    Coordinated a multi-segment research programme that brought
+                                    together evidence from more than 2,000 consumers alongside
+                                    hospitality, retail and distribution stakeholders to identify
+                                    demand barriers, supply-chain issues and market-development
+                                    opportunities.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="case-study-box">
+                            <span class="case-study-label">CASE STUDY</span>
+                            <p>
+                                The study examined the category from three sides: consumers,
+                                hotels/restaurants/cafés, and supermarkets/distributors.
+                                Consumer research found relatively high awareness but much lower
+                                recent consumption, with availability, taste and price emerging
+                                as important barriers. Trade and hospitality research showed that
+                                reliable supply, freshness, cold-chain management, quality
+                                consistency and customer demand were central to adoption. The
+                                combined findings identified opportunities around distribution,
+                                product formats, value-added products, communication and
+                                supplier reliability.
+                            </p>
+                        </div>
+
+                        <div class="tag-row">
+                            <span>Questionnaire Design</span>
+                            <span>Project Management</span>
+                            <span>Team Recruitment</span>
+                            <span>Training</span>
+                            <span>Market Research</span>
+                            <span>Report Writing</span>
+                        </div>
+                    </div>
+                </article>
+
+
+                <!-- 11 -->
+                <article class="project-card">
+                    <div class="project-visual visual-cosmetics" aria-hidden="true">
+                        <div class="beauty-bars">
+                            <span style="height:88%"></span>
+                            <span style="height:54%"></span>
+                            <span style="height:42%"></span>
+                        </div>
+                        <div class="beauty-labels">
+                            <span>Body</span>
+                            <span>Hair</span>
+                            <span>Skin</span>
+                        </div>
+                    </div>
+
+                    <div class="project-body">
+                        <div class="project-meta">
+                            <span>FMCG • Beauty & Personal Care • Market Research</span>
+                            <span>11</span>
+                        </div>
+
+                        <h3>Beauty & Personal-Care Consumer Market Study</h3>
+
+                        <p>
+                            A quantitative market study examining cosmetic usage,
+                            expenditure, brand behaviour, pricing, preferred pack sizes,
+                            willingness to try new brands, distribution channels and
+                            unmet consumer needs.
+                        </p>
+
+                        <div class="project-proof-grid project-proof-stack">
+                            <div class="project-proof">
+                                <span>WORK DONE</span>
+                                <p>
+                                    Contributed to questionnaire design; recruited and trained
+                                    the data-collection team; managed project implementation;
+                                    and supported report writing, findings synthesis and
+                                    development of actionable recommendations.
+                                </p>
+                            </div>
+
+                            <div class="project-proof milestone">
+                                <span>MILESTONE / VALUE</span>
+                                <p>
+                                    Delivered a 362-respondent study across urban and rural
+                                    locations, generating structured evidence on consumer
+                                    routines, purchase drivers, price sensitivity, pack
+                                    preferences, category gaps and routes to market.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="case-study-box">
+                            <span class="case-study-label">CASE STUDY</span>
+                            <p>
+                                The study focused on women aged 18–45 who actively used
+                                skincare, haircare and body-care products. The analysis
+                                compared category penetration, usage routines, expenditure,
+                                purchasing behaviour, price sensitivity, preferred packaging,
+                                willingness to trial new brands and distribution channels.
+                                Findings showed body-care products had the broadest usage,
+                                while the wider analysis identified practical opportunities
+                                for product development, distribution planning, pricing and
+                                innovation.
+                            </p>
+                        </div>
+
+                        <div class="tag-row">
+                            <span>Questionnaire Design</span>
+                            <span>Project Management</span>
+                            <span>Team Recruitment</span>
+                            <span>Training</span>
+                            <span>Consumer Research</span>
                             <span>Report Writing</span>
                         </div>
                     </div>
