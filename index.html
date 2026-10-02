@@ -982,6 +982,60 @@ a {
     border: 1px solid rgba(96,165,250,.18);
 }
 
+
+.visual-product-test {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:
+        radial-gradient(circle at center, rgba(34, 211, 238, 0.10), transparent 34%),
+        var(--navy-900);
+}
+
+.sensory-ring {
+    width: 185px;
+    height: 185px;
+    position: relative;
+    border-radius: 50%;
+    border: 1px solid rgba(103, 232, 249, 0.22);
+}
+
+.sensory-ring::before,
+.sensory-ring::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    inset: 28px;
+    border: 1px solid rgba(96, 165, 250, 0.18);
+}
+
+.sensory-ring::after {
+    inset: 58px;
+    background: rgba(59, 130, 246, 0.08);
+}
+
+.sensory-ring span {
+    position: absolute;
+    color: var(--cyan-300);
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.4px;
+}
+
+.sensory-ring span:nth-child(1) { top: 8px; left: 70px; }
+.sensory-ring span:nth-child(2) { top: 82px; right: -2px; }
+.sensory-ring span:nth-child(3) { bottom: 8px; left: 66px; }
+.sensory-ring span:nth-child(4) { top: 82px; left: -4px; }
+
+.sensory-core {
+    position: absolute;
+    color: var(--white);
+    font-size: 0.88rem;
+    font-weight: 800;
+    z-index: 2;
+}
+
 /* =========================================================
    EXPERIENCE TIMELINE
    ========================================================= */
@@ -2467,6 +2521,80 @@ a:focus-visible {
                             <span>Field Coordination</span>
                             <span>Data Quality</span>
                             <span>Analysis</span>
+                        </div>
+                    </div>
+                </article>
+
+
+                <!-- 07 -->
+                <article class="project-card">
+                    <div class="project-visual visual-product-test" aria-hidden="true">
+                        <div class="sensory-ring">
+                            <span>Taste</span>
+                            <span>Aroma</span>
+                            <span>Texture</span>
+                            <span>Intent</span>
+                        </div>
+                        <div class="sensory-core">Blind Test</div>
+                    </div>
+
+                    <div class="project-body">
+                        <div class="project-meta">
+                            <span>Consumer Research • Product Testing</span>
+                            <span>07</span>
+                        </div>
+
+                        <h3>Consumer Product Blind Testing & Sensory Evaluation</h3>
+
+                        <p>
+                            A mixed-method consumer study comparing four seasoning cube samples
+                            used in a common household meal, assessing appearance, taste, flavour,
+                            aroma, texture, firmness, purchase intent and recommendation.
+                        </p>
+
+                        <div class="project-proof-grid project-proof-stack">
+                            <div class="project-proof">
+                                <span>WORK DONE</span>
+                                <p>
+                                    Contributed to questionnaire design, recruitment and training
+                                    of the data-collection team, execution of the product-testing
+                                    sessions and preparation of the final research report.
+                                </p>
+                            </div>
+
+                            <div class="project-proof milestone">
+                                <span>MILESTONE / VALUE</span>
+                                <p>
+                                    Successfully delivered a blind comparison that identified clear
+                                    differences in sensory performance and purchase appeal across
+                                    the four samples, producing evidence for product positioning
+                                    and improvement decisions.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="case-study-box">
+                            <span class="case-study-label">CASE STUDY</span>
+                            <p>
+                                The study combined a quantitative blind product test with a focus
+                                group discussion. Thirty consumers completed the blind test and
+                                eleven participants joined the qualitative discussion. Each sample
+                                was evaluated before and after tasting, including appearance, taste,
+                                flavour, aroma, texture, firmness, ease of crumbling, purchase intent
+                                and likelihood to recommend. Results showed that taste, flavour and
+                                aroma were key choice drivers, while the blind tasting revealed
+                                clear differences in overall liking and purchase appeal between
+                                the four products.
+                            </p>
+                        </div>
+
+                        <div class="tag-row">
+                            <span>Questionnaire Design</span>
+                            <span>Product Testing</span>
+                            <span>Team Training</span>
+                            <span>Recruitment</span>
+                            <span>FGD</span>
+                            <span>Report Writing</span>
                         </div>
                     </div>
                 </article>
