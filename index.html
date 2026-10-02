@@ -1161,6 +1161,138 @@ a {
     font-weight: 700;
 }
 
+
+/* =========================================================
+   NEWSPAPER-STYLE CASE STUDIES
+   ========================================================= */
+
+.news-project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.news-card {
+    overflow: hidden;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--line-dark);
+    background:
+        linear-gradient(180deg, rgba(255,255,255,.02), transparent 32%),
+        var(--navy-850);
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(103, 232, 249, 0.28);
+    box-shadow: 0 18px 50px rgba(0,0,0,.18);
+}
+
+.news-card:first-child {
+    grid-column: span 2;
+    background:
+        radial-gradient(circle at 92% 10%, rgba(59,130,246,.14), transparent 30%),
+        var(--navy-850);
+}
+
+.news-body {
+    padding: 30px;
+}
+
+.news-card:first-child .news-body {
+    padding: 38px;
+}
+
+.news-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 17px;
+    color: var(--cyan-300);
+    font-size: .68rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.news-body h3 {
+    color: var(--white);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.75rem;
+    line-height: 1.18;
+    letter-spacing: -.4px;
+    margin-bottom: 14px;
+}
+
+.news-card:first-child .news-body h3 {
+    max-width: 850px;
+    font-size: 2.35rem;
+}
+
+.news-standfirst {
+    color: #c4d3e7;
+    font-size: .98rem;
+    font-weight: 600;
+    line-height: 1.72;
+    margin-bottom: 15px;
+}
+
+.news-copy {
+    color: var(--muted-dark);
+    font-size: .88rem;
+    line-height: 1.78;
+    margin-bottom: 20px;
+}
+
+.news-role,
+.news-evidence {
+    padding: 14px 0;
+    border-top: 1px solid var(--line-dark);
+}
+
+.news-role > span,
+.news-evidence > span {
+    display: block;
+    color: var(--blue-400);
+    font-size: .62rem;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    margin-bottom: 5px;
+}
+
+.news-evidence > span {
+    color: var(--cyan-300);
+}
+
+.news-role p,
+.news-evidence p {
+    color: #b6c6da;
+    font-size: .78rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+    .news-project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .news-card:first-child {
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .news-body,
+    .news-card:first-child .news-body {
+        padding: 23px 20px;
+    }
+
+    .news-body h3,
+    .news-card:first-child .news-body h3 {
+        font-size: 1.5rem;
+    }
+}
+
 /* =========================================================
    EXPERIENCE TIMELINE
    ========================================================= */
@@ -2244,782 +2376,236 @@ a:focus-visible {
     <!-- SELECTED WORK -->
     <section id="projects" class="section section-dark projects-section">
         <div class="section-shell">
-
             <div class="split-heading">
                 <div>
                     <p class="section-kicker">SELECTED WORK</p>
-                    <h2>Research & evaluation case studies</h2>
+                    <h2>Stories behind the evidence</h2>
                 </div>
-
                 <p>
-                    An anonymised selection of assignments showing the research work
-                    undertaken, my contribution and the practical milestones delivered
-                    across financial services, consumer markets, food and nutrition,
-                    youth research, public opinion, development programmes and
-                    multi-sector studies.
+                    An anonymised selection of research assignments written for a general
+                    audience — showing what happened, why the findings mattered and the role
+                    I played in turning evidence into useful decisions.
                 </p>
             </div>
 
-            <div class="project-grid">
+            <div class="news-project-grid">
 
-                <article class="project-card project-featured">
-                    <div class="project-visual visual-impact" aria-hidden="true">
-                        <div class="visual-label">IMPACT EVALUATION</div>
-                        <div class="visual-title">Women-Led Enterprise Study</div>
-                        <div class="visual-metrics">
-                            <span><strong>Mixed</strong> Methods</span>
-                            <span><strong>Financial</strong> Inclusion</span>
-                            <span><strong>Decision</strong> Insights</span>
-                        </div>
-                        <div class="visual-lines">
-                            <i style="width:82%"></i>
-                            <i style="width:64%"></i>
-                            <i style="width:73%"></i>
-                        </div>
-                    </div>
-
-                    <div class="project-body">
-                        <div class="project-meta">
-                            <span>Financial Inclusion • Impact Evaluation</span>
-                            <span>01</span>
-                        </div>
-
-                        <h3>Women-Led Enterprise Impact Evaluation</h3>
-
-                        <p>
-                            A mixed-method evaluation examining the experiences,
-                            business outcomes and financing realities of women-led
-                            enterprises participating in a financial inclusion programme.
-                        </p>
-
-                        <div class="project-proof-grid">
-                            <div class="project-proof">
-                                <span>WORK DONE</span>
-                                <p>
-                                    Supported research delivery, qualitative and quantitative
-                                    evidence synthesis, data analysis and reporting.
-                                </p>
-                            </div>
-
-                            <div class="project-proof milestone">
-                                <span>MILESTONE / VALUE</span>
-                                <p>
-                                    Converted participant experiences and programme findings
-                                    into decision-ready evidence on access, business growth,
-                                    barriers and areas for programme improvement.
-                                </p>
-                            </div>
-                        </div>
-
-                        
-                        <div class="case-study-box">
-                            <span class="case-study-label">CASE STUDY</span>
-                            <p>
-                                Women entrepreneurs described using finance to restock, expand product
-                                ranges, improve equipment and grow sales. Training and mentorship were
-                                also linked to stronger budgeting, savings discipline, customer relations
-                                and better separation of business and household money. At the same time,
-                                participants raised practical barriers including slow loan processing,
-                                insufficient amounts, collateral concerns and the time or travel cost of
-                                attending training.
-                            </p>
-                        </div>
-
-<div class="tag-row">
-                            <span>Impact Evaluation</span>
-                            <span>Qualitative Research</span>
-                            <span>Quantitative Research</span>
+                <article class="news-card">
+                    <div class="news-body">
+                        <div class="news-meta">
                             <span>Financial Inclusion</span>
+                            <span>Case Study 01</span>
+                        </div>
+                        <h3>Small Business Finance Is Helping Women Grow — But Access Still Has Friction</h3>
+                        <p class="news-standfirst">Women entrepreneurs described using financing to restock, expand product ranges, improve equipment and strengthen business operations.</p>
+                        <p class="news-copy">Training and mentorship also supported better budgeting, savings discipline and clearer separation of household and business money. At the same time, participants raised practical barriers including slow loan processing, financing amounts that did not always match business needs, collateral concerns and the time required to attend training.</p>
+                        <div class="news-role">
+                            <span>MY ROLE</span>
+                            <p>Research support • Data analysis • Interpretation • Report writing</p>
+                        </div>
+                        <div class="news-evidence">
+                            <span>EVIDENCE PRODUCED</span>
+                            <p>Insights on business growth, access to finance, financial management and programme improvement.</p>
                         </div>
                     </div>
                 </article>
 
-
-                <article class="project-card">
-                    <div class="project-visual visual-brand" aria-hidden="true">
-                        <div class="chart-ring"></div>
-                        <div class="chart-bars">
-                            <span style="height:50%"></span>
-                            <span style="height:72%"></span>
-                            <span style="height:63%"></span>
-                            <span style="height:84%"></span>
-                        </div>
-                    </div>
-
-                    <div class="project-body">
-                        <div class="project-meta">
-                            <span>Market Research • Financial Services</span>
-                            <span>02</span>
-                        </div>
-
-                        <h3>Brand Visibility & Customer Engagement Evaluation</h3>
-
-                        <p>
-                            Research assessing brand visibility, sponsorship impact and
-                            customer engagement for a major financial-services organisation.
-                        </p>
-
-                        <div class="project-proof-grid project-proof-stack">
-                            <div class="project-proof">
-                                <span>WORK DONE</span>
-                                <p>
-                                    Supported consumer research, data analysis, interpretation
-                                    and preparation of client-facing findings.
-                                </p>
-                            </div>
-
-                            <div class="project-proof milestone">
-                                <span>MILESTONE / VALUE</span>
-                                <p>
-                                    Consolidated consumer evidence into clear insights that
-                                    supported brand and engagement decision-making.
-                                </p>
-                            </div>
-                        </div>
-
-                        
-                        <div class="case-study-box">
-                            <span class="case-study-label">CASE STUDY</span>
-                            <p>
-                                The assignment examined how visible brand and sponsorship assets were,
-                                how customers engaged with them and what that meant for brand perception.
-                                Consumer responses were analysed and translated into client-facing findings
-                                to support decisions on visibility, sponsorship and engagement strategy.
-                            </p>
-                        </div>
-
-<div class="tag-row">
-                            <span>Consumer Insights</span>
-                            <span>Brand Research</span>
-                            <span>Data Analysis</span>
-                            <span>Reporting</span>
-                        </div>
-                    </div>
-                </article>
-
-
-                <article class="project-card">
-                    <div class="project-visual visual-public" aria-hidden="true">
-                        <div class="poll-number">National</div>
-                        <div class="poll-copy">
-                            Public opinion evidence across governance, social and
-                            socio-economic issues.
-                        </div>
-                        <div class="poll-dots">
-                            <span></span><span></span><span></span><span></span><span></span>
-                        </div>
-                    </div>
-
-                    <div class="project-body">
-                        <div class="project-meta">
-                            <span>Public Opinion Research</span>
-                            <span>03</span>
-                        </div>
-
-                        <h3>National Public Opinion Research Programme</h3>
-
-                        <p>
-                            Supported national survey research examining governance,
-                            social and socio-economic issues across Kenya.
-                        </p>
-
-                        <div class="project-proof-grid project-proof-stack">
-                            <div class="project-proof">
-                                <span>WORK DONE</span>
-                                <p>
-                                    Supported survey implementation, data quality processes,
-                                    evidence preparation and national-level research outputs.
-                                </p>
-                            </div>
-
-                            <div class="project-proof milestone">
-                                <span>MILESTONE / VALUE</span>
-                                <p>
-                                    Helped strengthen reliable public-opinion evidence for
-                                    understanding citizen experiences, priorities and perceptions.
-                                </p>
-                            </div>
-                        </div>
-
-                        
-                        <div class="case-study-box">
-                            <span class="case-study-label">CASE STUDY</span>
-                            <p>
-                                National survey work gathered citizen views on governance, social and
-                                socio-economic issues. The work involved survey implementation, data-quality
-                                checks and preparation of research outputs that converted public perceptions
-                                into structured evidence for understanding priorities, experiences and opinion.
-                            </p>
-                        </div>
-
-<div class="tag-row">
-                            <span>National Surveys</span>
-                            <span>Public Opinion</span>
-                            <span>Data Quality</span>
-                            <span>Evidence Generation</span>
-                        </div>
-                    </div>
-                </article>
-
-
-                <article class="project-card">
-                    <div class="project-visual visual-campaign" aria-hidden="true">
-                        <div class="campaign-arrow">↗</div>
-                        <div class="campaign-lines">
-                            <span>Reach</span>
-                            <span>Effectiveness</span>
-                            <span>Evidence</span>
-                        </div>
-                    </div>
-
-                    <div class="project-body">
-                        <div class="project-meta">
-                            <span>Development Programme • Campaign Evaluation</span>
-                            <span>04</span>
-                        </div>
-
-                        <h3>Development Campaign Effectiveness Evaluation</h3>
-
-                        <p>
-                            Structured evaluation of a regional development campaign,
-                            assessing reach and effectiveness through respondent research.
-                        </p>
-
-                        <div class="project-proof-grid project-proof-stack">
-                            <div class="project-proof">
-                                <span>WORK DONE</span>
-                                <p>
-                                    Supported CATI research, structured data collection,
-                                    analysis and reporting of campaign evidence.
-                                </p>
-                            </div>
-
-                            <div class="project-proof milestone">
-                                <span>MILESTONE / VALUE</span>
-                                <p>
-                                    Produced evidence on campaign reach and effectiveness
-                                    to support future communication and programme decisions.
-                                </p>
-                            </div>
-                        </div>
-
-                        
-                        <div class="case-study-box">
-                            <span class="case-study-label">CASE STUDY</span>
-                            <p>
-                                A CATI survey was used to assess a multi-channel development campaign after
-                                it had run across television, radio, social media, online advertising,
-                                influencers and outdoor media. The evaluation tested awareness, recall,
-                                message penetration, channel reach, perceptions and whether exposure led
-                                people to search for information, visit campaign platforms, discuss the
-                                campaign or pursue related opportunities.
-                            </p>
-                        </div>
-
-<div class="tag-row">
-                            <span>CATI</span>
-                            <span>Campaign Evaluation</span>
-                            <span>Analysis</span>
-                            <span>Reporting</span>
-                        </div>
-                    </div>
-                </article>
-
-
-                <article class="project-card">
-                    <div class="project-visual visual-comms" aria-hidden="true">
-                        <div class="comms-orbit">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                        <div class="comms-core">Insight</div>
-                    </div>
-
-                    <div class="project-body">
-                        <div class="project-meta">
-                            <span>Renewable Energy • Communications Research</span>
-                            <span>05</span>
-                        </div>
-
-                        <h3>Stakeholder & Communications Evaluation</h3>
-
-                        <p>
-                            Evaluation of communications and public-relations activities
-                            for a large renewable-energy organisation.
-                        </p>
-
-                        <div class="project-proof-grid project-proof-stack">
-                            <div class="project-proof">
-                                <span>WORK DONE</span>
-                                <p>
-                                    Supported stakeholder research, evidence analysis and
-                                    synthesis of communication-related findings.
-                                </p>
-                            </div>
-
-                            <div class="project-proof milestone">
-                                <span>MILESTONE / VALUE</span>
-                                <p>
-                                    Generated practical stakeholder evidence to inform
-                                    communication strategy and future engagement priorities.
-                                </p>
-                            </div>
-                        </div>
-
-                        
-                        <div class="case-study-box">
-                            <span class="case-study-label">CASE STUDY</span>
-                            <p>
-                                Stakeholder research was used to assess communications and public-relations
-                                activity around a large infrastructure and energy context. Feedback and
-                                communication-related findings were synthesised into evidence that could
-                                inform a broader communication strategy and future stakeholder engagement.
-                            </p>
-                        </div>
-
-<div class="tag-row">
-                            <span>Stakeholder Insights</span>
-                            <span>Communications</span>
-                            <span>Evaluation</span>
-                            <span>Strategy</span>
-                        </div>
-                    </div>
-                </article>
-
-
-                <article class="project-card">
-                    <div class="project-visual visual-national" aria-hidden="true">
-                        <div class="national-grid">
-                            <span></span><span></span><span></span><span></span>
-                            <span></span><span></span><span></span><span></span>
-                            <span></span><span></span><span></span><span></span>
-                        </div>
-                    </div>
-
-                    <div class="project-body">
-                        <div class="project-meta">
-                            <span>Multi-Sector Research & Evaluation</span>
-                            <span>06</span>
-                        </div>
-
-                        <h3>National & Multi-Sector Research Portfolio</h3>
-
-                        <p>
-                            Research support across national surveys, public opinion studies,
-                            and baseline, midline and endline assignments in multiple sectors.
-                        </p>
-
-                        <div class="project-proof-grid project-proof-stack">
-                            <div class="project-proof">
-                                <span>WORK DONE</span>
-                                <p>
-                                    Supported research design, digital data collection,
-                                    field coordination, data quality, analysis and reporting.
-                                </p>
-                            </div>
-
-                            <div class="project-proof milestone">
-                                <span>MILESTONE / VALUE</span>
-                                <p>
-                                    Built end-to-end experience across the research cycle,
-                                    contributing to consistent delivery of decision-ready
-                                    evidence in varied programme and research contexts.
-                                </p>
-                            </div>
-                        </div>
-
-                        
-                        <div class="case-study-box">
-                            <span class="case-study-label">CASE STUDY</span>
-                            <p>
-                                Across different assignments, research moved from questionnaire design and
-                                field coordination through digital data collection, quality assurance,
-                                analysis and reporting. Methods included structured surveys, CATI, ODK,
-                                FGDs, KIIs and stakeholder consultations, with outputs developed as reports,
-                                presentations, insight briefs and practical recommendations across sectors
-                                such as governance, financial inclusion, energy, livelihoods and social development.
-                            </p>
-                        </div>
-
-<div class="tag-row">
-                            <span>Research Design</span>
-                            <span>Field Coordination</span>
-                            <span>Data Quality</span>
-                            <span>Analysis</span>
-                        </div>
-                    </div>
-                </article>
-
-
-                <!-- 07 -->
-                <article class="project-card">
-                    <div class="project-visual visual-product-test" aria-hidden="true">
-                        <div class="sensory-ring">
-                            <span>Taste</span>
-                            <span>Aroma</span>
-                            <span>Texture</span>
-                            <span>Intent</span>
-                        </div>
-                        <div class="sensory-core">Blind Test</div>
-                    </div>
-
-                    <div class="project-body">
-                        <div class="project-meta">
-                            <span>Consumer Research • Product Testing</span>
-                            <span>07</span>
-                        </div>
-
-                        <h3>Consumer Product Blind Testing & Sensory Evaluation</h3>
-
-                        <p>
-                            A mixed-method consumer study comparing four seasoning cube samples
-                            used in a common household meal, assessing appearance, taste, flavour,
-                            aroma, texture, firmness, purchase intent and recommendation.
-                        </p>
-
-                        <div class="project-proof-grid project-proof-stack">
-                            <div class="project-proof">
-                                <span>WORK DONE</span>
-                                <p>
-                                    Contributed to questionnaire design, recruitment and training
-                                    of the data-collection team, execution of the product-testing
-                                    sessions and preparation of the final research report.
-                                </p>
-                            </div>
-
-                            <div class="project-proof milestone">
-                                <span>MILESTONE / VALUE</span>
-                                <p>
-                                    Successfully delivered a blind comparison that identified clear
-                                    differences in sensory performance and purchase appeal across
-                                    the four samples, producing evidence for product positioning
-                                    and improvement decisions.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="case-study-box">
-                            <span class="case-study-label">CASE STUDY</span>
-                            <p>
-                                The study combined a quantitative blind product test with a focus
-                                group discussion. Thirty consumers completed the blind test and
-                                eleven participants joined the qualitative discussion. Each sample
-                                was evaluated before and after tasting, including appearance, taste,
-                                flavour, aroma, texture, firmness, ease of crumbling, purchase intent
-                                and likelihood to recommend. Results showed that taste, flavour and
-                                aroma were key choice drivers, while the blind tasting revealed
-                                clear differences in overall liking and purchase appeal between
-                                the four products.
-                            </p>
-                        </div>
-
-                        <div class="tag-row">
-                            <span>Questionnaire Design</span>
-                            <span>Product Testing</span>
-                            <span>Team Training</span>
-                            <span>Recruitment</span>
-                            <span>FGD</span>
-                            <span>Report Writing</span>
-                        </div>
-                    </div>
-                </article>
-
-
-                <!-- 08 -->
-                <article class="project-card">
-                    <div class="project-visual visual-school-baseline" aria-hidden="true">
-                        <div class="baseline-path">
-                            <span>Exposure</span>
-                            <span>Awareness</span>
-                            <span>Attitudes</span>
-                            <span>Trial</span>
-                            <span>Adoption</span>
-                        </div>
-                        <div class="baseline-core">Baseline</div>
-                    </div>
-
-                    <div class="project-body">
-                        <div class="project-meta">
-                            <span>Education • Nutrition • Behaviour Change</span>
-                            <span>08</span>
-                        </div>
-
-                        <h3>School Feeding Behaviour-Change Baseline Study</h3>
-
-                        <p>
-                            A multi-stakeholder baseline examining awareness, attitudes and
-                            readiness around the transition from refined foods to fortified
-                            whole-grain foods within school feeding programmes.
-                        </p>
-
-                        <div class="project-proof-grid project-proof-stack">
-                            <div class="project-proof">
-                                <span>WORK DONE</span>
-                                <p>
-                                    Contributed to report writing and insight generation,
-                                    translating survey findings into clear narratives,
-                                    implications and decision-ready takeaways.
-                                </p>
-                            </div>
-
-                            <div class="project-proof milestone">
-                                <span>MILESTONE / VALUE</span>
-                                <p>
-                                    Helped turn findings from 698 respondents across 19 schools
-                                    into an evidence-based baseline showing where awareness was
-                                    already strong and where adoption, knowledge and sustained
-                                    behaviour still required programme attention.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="case-study-box">
-                            <span class="case-study-label">CASE STUDY</span>
-                            <p>
-                                The study covered learners, parents, cooks and school
-                                administrators across seven counties. Reporting was structured
-                                around a behaviour-change pathway moving from exposure and
-                                awareness through attitudes, trial, adoption and
-                                institutionalisation. The analysis showed that awareness of
-                                whole-grain foods was already high across stakeholder groups,
-                                shifting the programme challenge from simple awareness creation
-                                toward deeper knowledge, positive attitudes and sustained
-                                consumption.
-                            </p>
-                        </div>
-
-                        <div class="tag-row">
-                            <span>Report Writing</span>
-                            <span>Insight Generation</span>
-                            <span>Baseline Study</span>
-                            <span>Behaviour Change</span>
-                            <span>Education Research</span>
-                        </div>
-                    </div>
-                </article>
-
-
-                <!-- 09 -->
-                <article class="project-card">
-                    <div class="project-visual visual-youth-insights" aria-hidden="true">
-                        <div class="youth-device">◫</div>
-                        <div class="youth-signals">
-                            <span></span><span></span><span></span>
-                        </div>
-                        <div class="youth-label">Future Consumers</div>
-                    </div>
-
-                    <div class="project-body">
-                        <div class="project-meta">
-                            <span>Youth Research • Technology • Consumer Insights</span>
-                            <span>09</span>
-                        </div>
-
-                        <h3>Children, Households & Future Consumer Trends Study</h3>
-
-                        <p>
-                            A national study exploring how a new generation of children
-                            interacts with technology, brands, household purchasing,
-                            learning, money, social influence and future opportunities.
-                        </p>
-
-                        <div class="project-proof-grid project-proof-stack">
-                            <div class="project-proof">
-                                <span>WORK DONE</span>
-                                <p>
-                                    Contributed to report writing and insight generation,
-                                    interpreting quantitative and qualitative findings and
-                                    translating them into clear sector and decision implications.
-                                </p>
-                            </div>
-
-                            <div class="project-proof milestone">
-                                <span>MILESTONE / VALUE</span>
-                                <p>
-                                    Helped transform a large, multi-topic dataset into
-                                    decision-ready narratives on digital behaviour, device
-                                    access, family influence, brand engagement, education and
-                                    emerging consumer opportunities.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="case-study-box">
-                            <span class="case-study-label">CASE STUDY</span>
-                            <p>
-                                The research combined child and parent perspectives to
-                                understand everyday digital life and household influence.
-                                Reporting highlighted that access to technology is still
-                                strongly shared through family devices, while personal
-                                smartphone ownership increases with age. Regional differences
-                                were also more pronounced than gender differences in several
-                                areas, creating distinct implications for digital engagement,
-                                education, technology products and future-market strategies.
-                            </p>
-                        </div>
-
-                        <div class="tag-row">
-                            <span>Report Writing</span>
-                            <span>Insight Generation</span>
-                            <span>Youth Research</span>
-                            <span>Digital Behaviour</span>
-                            <span>Consumer Trends</span>
-                        </div>
-                    </div>
-                </article>
-
-
-                <!-- 10 -->
-                <article class="project-card">
-                    <div class="project-visual visual-market-chain" aria-hidden="true">
-                        <div class="chain-node">Consumer</div>
-                        <div class="chain-line"></div>
-                        <div class="chain-node">HORECA</div>
-                        <div class="chain-line"></div>
-                        <div class="chain-node">Trade</div>
-                    </div>
-
-                    <div class="project-body">
-                        <div class="project-meta">
-                            <span>Food Market Research • Value Chain • Consumer Demand</span>
-                            <span>10</span>
-                        </div>
-
-                        <h3>Fish Consumption & Market Development Study</h3>
-
-                        <p>
-                            A multi-audience market study examining fish consumption,
-                            awareness, product preferences, supply-chain constraints,
-                            distribution channels and opportunities to expand demand for
-                            an under-consumed fish category.
-                        </p>
-
-                        <div class="project-proof-grid project-proof-stack">
-                            <div class="project-proof">
-                                <span>WORK DONE</span>
-                                <p>
-                                    Contributed to questionnaire design; recruited and trained
-                                    the data-collection team; managed fieldwork delivery and
-                                    project coordination; and supported report writing and
-                                    synthesis of findings.
-                                </p>
-                            </div>
-
-                            <div class="project-proof milestone">
-                                <span>MILESTONE / VALUE</span>
-                                <p>
-                                    Coordinated a multi-segment research programme that brought
-                                    together evidence from more than 2,000 consumers alongside
-                                    hospitality, retail and distribution stakeholders to identify
-                                    demand barriers, supply-chain issues and market-development
-                                    opportunities.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="case-study-box">
-                            <span class="case-study-label">CASE STUDY</span>
-                            <p>
-                                The study examined the category from three sides: consumers,
-                                hotels/restaurants/cafés, and supermarkets/distributors.
-                                Consumer research found relatively high awareness but much lower
-                                recent consumption, with availability, taste and price emerging
-                                as important barriers. Trade and hospitality research showed that
-                                reliable supply, freshness, cold-chain management, quality
-                                consistency and customer demand were central to adoption. The
-                                combined findings identified opportunities around distribution,
-                                product formats, value-added products, communication and
-                                supplier reliability.
-                            </p>
-                        </div>
-
-                        <div class="tag-row">
-                            <span>Questionnaire Design</span>
-                            <span>Project Management</span>
-                            <span>Team Recruitment</span>
-                            <span>Training</span>
+                <article class="news-card">
+                    <div class="news-body">
+                        <div class="news-meta">
                             <span>Market Research</span>
-                            <span>Report Writing</span>
+                            <span>Case Study 02</span>
+                        </div>
+                        <h3>A Brand Can Be Highly Visible Without Truly Connecting With Consumers</h3>
+                        <p class="news-standfirst">The study looked beyond simple visibility to understand how consumers actually experienced sponsorships, brand activity and customer engagement.</p>
+                        <p class="news-copy">The research examined whether consumers merely noticed brand activity or whether those encounters influenced awareness, interaction and overall perception. The findings were translated into evidence that could guide future brand, sponsorship and engagement decisions.</p>
+                        <div class="news-role">
+                            <span>MY ROLE</span>
+                            <p>Consumer research • Data analysis • Interpretation • Reporting</p>
+                        </div>
+                        <div class="news-evidence">
+                            <span>EVIDENCE PRODUCED</span>
+                            <p>Findings on visibility, sponsorship impact and consumer engagement.</p>
                         </div>
                     </div>
                 </article>
 
-
-                <!-- 11 -->
-                <article class="project-card">
-                    <div class="project-visual visual-cosmetics" aria-hidden="true">
-                        <div class="beauty-bars">
-                            <span style="height:88%"></span>
-                            <span style="height:54%"></span>
-                            <span style="height:42%"></span>
+                <article class="news-card">
+                    <div class="news-body">
+                        <div class="news-meta">
+                            <span>Public Opinion Research</span>
+                            <span>Case Study 03</span>
                         </div>
-                        <div class="beauty-labels">
-                            <span>Body</span>
-                            <span>Hair</span>
-                            <span>Skin</span>
+                        <h3>What Kenyans Say About the Issues Affecting Their Everyday Lives</h3>
+                        <p class="news-standfirst">National surveys gathered citizen views on governance, economic conditions and social issues, turning individual experiences into structured evidence.</p>
+                        <p class="news-copy">The work combined survey implementation with data-quality processes so that findings could provide a reliable picture of public priorities, perceptions and experiences across different groups and locations.</p>
+                        <div class="news-role">
+                            <span>MY ROLE</span>
+                            <p>Survey implementation • Data quality • Evidence preparation • Research reporting</p>
+                        </div>
+                        <div class="news-evidence">
+                            <span>EVIDENCE PRODUCED</span>
+                            <p>National-level public-opinion findings for decision-makers.</p>
                         </div>
                     </div>
+                </article>
 
-                    <div class="project-body">
-                        <div class="project-meta">
-                            <span>FMCG • Beauty & Personal Care • Market Research</span>
-                            <span>11</span>
+                <article class="news-card">
+                    <div class="news-body">
+                        <div class="news-meta">
+                            <span>Campaign Evaluation</span>
+                            <span>Case Study 04</span>
                         </div>
-
-                        <h3>Beauty & Personal-Care Consumer Market Study</h3>
-
-                        <p>
-                            A quantitative market study examining cosmetic usage,
-                            expenditure, brand behaviour, pricing, preferred pack sizes,
-                            willingness to try new brands, distribution channels and
-                            unmet consumer needs.
-                        </p>
-
-                        <div class="project-proof-grid project-proof-stack">
-                            <div class="project-proof">
-                                <span>WORK DONE</span>
-                                <p>
-                                    Contributed to questionnaire design; recruited and trained
-                                    the data-collection team; managed project implementation;
-                                    and supported report writing, findings synthesis and
-                                    development of actionable recommendations.
-                                </p>
-                            </div>
-
-                            <div class="project-proof milestone">
-                                <span>MILESTONE / VALUE</span>
-                                <p>
-                                    Delivered a 362-respondent study across urban and rural
-                                    locations, generating structured evidence on consumer
-                                    routines, purchase drivers, price sensitivity, pack
-                                    preferences, category gaps and routes to market.
-                                </p>
-                            </div>
+                        <h3>Did People Just See the Campaign — or Did It Actually Influence Them?</h3>
+                        <p class="news-standfirst">The evaluation examined whether a major development campaign was reaching its intended audiences and whether its messages were remembered and acted upon.</p>
+                        <p class="news-copy">Research explored awareness, recall, message penetration and behaviour following exposure, helping distinguish between simply broadcasting communications and creating meaningful audience response.</p>
+                        <div class="news-role">
+                            <span>MY ROLE</span>
+                            <p>CATI research • Structured data collection • Analysis • Report writing</p>
                         </div>
-
-                        <div class="case-study-box">
-                            <span class="case-study-label">CASE STUDY</span>
-                            <p>
-                                The study focused on women aged 18–45 who actively used
-                                skincare, haircare and body-care products. The analysis
-                                compared category penetration, usage routines, expenditure,
-                                purchasing behaviour, price sensitivity, preferred packaging,
-                                willingness to trial new brands and distribution channels.
-                                Findings showed body-care products had the broadest usage,
-                                while the wider analysis identified practical opportunities
-                                for product development, distribution planning, pricing and
-                                innovation.
-                            </p>
+                        <div class="news-evidence">
+                            <span>EVIDENCE PRODUCED</span>
+                            <p>Findings on campaign reach, effectiveness and audience response.</p>
                         </div>
+                    </div>
+                </article>
 
-                        <div class="tag-row">
-                            <span>Questionnaire Design</span>
-                            <span>Project Management</span>
-                            <span>Team Recruitment</span>
-                            <span>Training</span>
-                            <span>Consumer Research</span>
-                            <span>Report Writing</span>
+                <article class="news-card">
+                    <div class="news-body">
+                        <div class="news-meta">
+                            <span>Stakeholder Research</span>
+                            <span>Case Study 05</span>
+                        </div>
+                        <h3>Listening to Stakeholders Can Change How Organisations Communicate</h3>
+                        <p class="news-standfirst">Stakeholder research tested how communication and engagement were actually experienced around a major infrastructure and energy context.</p>
+                        <p class="news-copy">Instead of relying only on what the organisation believed it was communicating effectively, the study gathered external perspectives and translated them into evidence that could support communication planning and future stakeholder engagement.</p>
+                        <div class="news-role">
+                            <span>MY ROLE</span>
+                            <p>Stakeholder research • Evidence analysis • Findings synthesis • Reporting</p>
+                        </div>
+                        <div class="news-evidence">
+                            <span>EVIDENCE PRODUCED</span>
+                            <p>Insights for communication strategy and stakeholder engagement.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-body">
+                        <div class="news-meta">
+                            <span>Multi-Sector Research</span>
+                            <span>Case Study 06</span>
+                        </div>
+                        <h3>From the Questionnaire to the Final Report: What It Takes to Deliver Reliable Research</h3>
+                        <p class="news-standfirst">Across several assignments, research moved through the full evidence cycle — from study design and fieldwork to quality assurance, analysis and reporting.</p>
+                        <p class="news-copy">The portfolio included surveys, public-opinion research and baseline, midline and endline studies across different programme and market contexts.</p>
+                        <div class="news-role">
+                            <span>MY ROLE</span>
+                            <p>Research design • Digital data collection • Field coordination • Data quality • Analysis • Reporting</p>
+                        </div>
+                        <div class="news-evidence">
+                            <span>EVIDENCE PRODUCED</span>
+                            <p>Reports, presentations, dashboards and practical recommendations across multiple sectors.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-body">
+                        <div class="news-meta">
+                            <span>Consumer Product Testing</span>
+                            <span>Case Study 07</span>
+                        </div>
+                        <h3>When Consumers Taste a Product Without Seeing the Brand, Preferences Become Clearer</h3>
+                        <p class="news-standfirst">A blind consumer test compared four seasoning products without allowing branding or packaging to influence the initial judgement.</p>
+                        <p class="news-copy">Thirty consumers completed the product test and 11 joined a follow-up group discussion. Participants assessed appearance, taste, flavour, aroma, texture, firmness and purchase appeal, revealing clear differences in overall liking between the samples.</p>
+                        <div class="news-role">
+                            <span>MY ROLE</span>
+                            <p>Questionnaire design • Recruitment • Team training • Product-testing execution • Report writing</p>
+                        </div>
+                        <div class="news-evidence">
+                            <span>EVIDENCE PRODUCED</span>
+                            <p>Comparative evidence on sensory performance, consumer preference and purchase appeal.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-body">
+                        <div class="news-meta">
+                            <span>Education & Nutrition</span>
+                            <span>Case Study 08</span>
+                        </div>
+                        <h3>Schools Already Know About Whole Grains — The Challenge Is Turning Awareness Into Everyday Habits</h3>
+                        <p class="news-standfirst">A baseline involving 698 respondents across 19 schools examined learners, parents, cooks and administrators to understand readiness for greater use of fortified whole-grain foods.</p>
+                        <p class="news-copy">Awareness was already high, shifting the programme challenge away from simple exposure and toward deeper knowledge, positive attitudes, trial and sustained adoption within school feeding systems.</p>
+                        <div class="news-role">
+                            <span>MY ROLE</span>
+                            <p>Report writing • Insight generation • Interpretation of findings</p>
+                        </div>
+                        <div class="news-evidence">
+                            <span>EVIDENCE PRODUCED</span>
+                            <p>Behavioural insights showing where future school-feeding interventions should focus.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-body">
+                        <div class="news-meta">
+                            <span>Youth & Consumer Trends</span>
+                            <span>Case Study 09</span>
+                        </div>
+                        <h3>Kenya's Children Are Growing Up Digital — But Their Experiences Are Far From Uniform</h3>
+                        <p class="news-standfirst">Research comparing children and parents found that digital access is still heavily tied to shared household technology.</p>
+                        <p class="news-copy">Most children regularly used a parent or caregiver's smartphone, while personal smartphone ownership increased with age. Regional differences were also often stronger than gender differences, creating very different digital experiences across the country.</p>
+                        <div class="news-role">
+                            <span>MY ROLE</span>
+                            <p>Report writing • Insight generation • Interpretation of quantitative and qualitative evidence</p>
+                        </div>
+                        <div class="news-evidence">
+                            <span>EVIDENCE PRODUCED</span>
+                            <p>Decision-ready insights on children's digital behaviour, household influence and future consumer trends.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-body">
+                        <div class="news-meta">
+                            <span>Food Market Research</span>
+                            <span>Case Study 10</span>
+                        </div>
+                        <h3>Consumers Know the Product — So Why Isn't Consumption Higher?</h3>
+                        <p class="news-standfirst">A nationwide study interviewed 2,095 fish consumers and also examined the market through hotels, restaurants, cafés and trade channels.</p>
+                        <p class="news-copy">The evidence showed that market growth required more than consumer awareness. Availability, product presentation, reliable supply, freshness, cold-chain management and quality consistency all affected adoption.</p>
+                        <div class="news-role">
+                            <span>MY ROLE</span>
+                            <p>Questionnaire design • Recruitment • Team training • Project management • Report writing</p>
+                        </div>
+                        <div class="news-evidence">
+                            <span>EVIDENCE PRODUCED</span>
+                            <p>A market-wide view connecting consumer demand with supply-chain and distribution realities.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-body">
+                        <div class="news-meta">
+                            <span>Beauty & Personal Care</span>
+                            <span>Case Study 11</span>
+                        </div>
+                        <h3>What Women Buy in Beauty Depends on More Than Price</h3>
+                        <p class="news-standfirst">A quantitative study interviewed 362 women aged 18–45 across urban and rural locations to understand cosmetics use, spending and purchasing behaviour.</p>
+                        <p class="news-copy">The research explored commonly used products and brands, expenditure, acceptable pricing, preferred pack sizes, willingness to try new brands, distribution channels and unmet needs. Body-care products had the broadest usage, while the wider evidence highlighted the combined role of routines, performance, affordability and availability.</p>
+                        <div class="news-role">
+                            <span>MY ROLE</span>
+                            <p>Questionnaire design • Recruitment • Team training • Project management • Report writing</p>
+                        </div>
+                        <div class="news-evidence">
+                            <span>EVIDENCE PRODUCED</span>
+                            <p>Consumer insights supporting product development, pricing, packaging, distribution and market-entry decisions.</p>
                         </div>
                     </div>
                 </article>
