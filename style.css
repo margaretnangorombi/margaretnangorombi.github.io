@@ -98,3 +98,64 @@ footer{padding:26px 0;color:var(--muted);font-size:.8rem}.footer-inner{display:f
   .metric span{font-size:.62rem}
   .hero-bottom{font-size:.54rem;letter-spacing:.06em}
 }
+
+
+/* FINAL HERO FIX — use the actual viewport width instead of nesting a narrow container */
+.hero{
+  display:block;
+  min-height:calc(100svh - 76px);
+  padding:clamp(112px,12vh,150px) 0 34px;
+}
+.hero .container.hero-grid{
+  width:min(1640px,92vw);
+  max-width:none;
+  margin-inline:auto;
+  display:grid;
+  grid-template-columns:minmax(0,1.3fr) minmax(400px,.7fr);
+  gap:clamp(48px,5vw,96px);
+  align-items:center;
+}
+.hero-grid>div:first-child{min-width:0;max-width:850px}
+.hero h1{
+  width:100%;
+  max-width:17ch;
+  font-size:clamp(3.2rem,4.1vw,4.7rem);
+  line-height:1.06;
+  letter-spacing:-.052em;
+  text-wrap:balance;
+}
+.hero-copy{max-width:720px;font-size:clamp(1rem,1.15vw,1.12rem);line-height:1.8}
+.hero-card{
+  width:100%;
+  max-width:570px;
+  justify-self:end;
+  padding:24px;
+}
+.profile-photo{height:clamp(410px,40vw,540px)}
+.hero .container.hero-bottom{
+  width:min(1640px,92vw);
+  max-width:none;
+  margin:34px auto 0;
+  padding-top:17px;
+  border-top:1px solid var(--line);
+}
+@media(min-width:1500px){
+ .hero .container.hero-grid{grid-template-columns:minmax(0,1.35fr) minmax(460px,.65fr);gap:90px}
+ .hero h1{font-size:clamp(4rem,4.25vw,5.2rem);max-width:17ch}
+ .profile-photo{height:540px}
+}
+@media(max-width:1050px){
+ .hero .container.hero-grid{width:min(1240px,92vw);grid-template-columns:minmax(0,1.05fr) minmax(320px,.85fr);gap:34px}
+ .hero h1{font-size:clamp(2.8rem,4.8vw,3.8rem);max-width:16ch}
+ .profile-photo{height:390px}
+}
+@media(max-width:760px){
+ .hero{min-height:0;padding:112px 0 28px}
+ .hero .container.hero-grid{width:min(620px,92vw);grid-template-columns:1fr;gap:28px}
+ .hero-grid>div:first-child{max-width:none}
+ .hero h1{font-size:clamp(2.35rem,8.8vw,3.25rem);max-width:15ch}
+ .hero-copy{font-size:.97rem}
+ .hero-card{max-width:560px;justify-self:center;padding:16px}
+ .profile-photo{height:clamp(290px,82vw,390px)}
+ .hero .container.hero-bottom{width:min(620px,92vw);margin-top:24px}
+}
