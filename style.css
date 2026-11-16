@@ -22,3 +22,79 @@ footer{padding:26px 0;color:var(--muted);font-size:.8rem}.footer-inner{display:f
 .detail-card p{color:var(--muted);font-size:.96rem;line-height:1.8;margin-top:10px}
 .callout{padding:17px;border-left:3px solid var(--accent);background:rgba(73,214,168,.07);border-radius:9px;margin-top:20px;color:#dce9f5;font-size:.9rem}
 @media(max-width:900px){.detail-grid{grid-template-columns:1fr}}
+
+
+/* Hero balance refinement: restore a vertical section flow and share desktop width evenly */
+.hero{
+  display:flex;
+  flex-direction:column;
+  align-items:stretch;
+  justify-content:center;
+  gap:0;
+  padding:132px 0 38px;
+  min-height:calc(100vh - 76px);
+}
+.hero-grid{
+  width:min(1280px,92%);
+  display:grid;
+  grid-template-columns:minmax(0,1.08fr) minmax(380px,.92fr);
+  gap:clamp(42px,5vw,78px);
+  align-items:center;
+  flex:1;
+}
+.hero-grid>div:first-child{min-width:0}
+.hero h1{
+  max-width:14ch;
+  font-size:clamp(2.9rem,4.15vw,3.95rem);
+  line-height:1.08;
+  letter-spacing:-.048em;
+  text-wrap:balance;
+  margin-bottom:20px;
+}
+.hero-copy{max-width:610px;font-size:1rem;line-height:1.78}
+.hero-card{
+  width:100%;
+  max-width:540px;
+  justify-self:end;
+  padding:22px;
+  border-radius:26px;
+  background:linear-gradient(145deg,rgba(73,214,168,.15),rgba(98,168,255,.09));
+  box-shadow:0 28px 80px rgba(0,0,0,.3);
+}
+.profile-photo{height:clamp(370px,39vw,490px);border-radius:18px}
+.profile-photo img{object-position:center 22%}
+.metric-strip{gap:10px;margin-top:15px}
+.metric{padding:13px 9px}
+.metric strong{font-size:1.45rem}
+.metric span{font-size:.74rem}
+.hero-bottom{
+  width:min(1280px,92%);
+  margin:28px auto 0;
+  padding-top:18px;
+  border-top:1px solid var(--line);
+  flex-shrink:0;
+}
+@media(max-width:1000px){
+  .hero{min-height:auto;padding:120px 0 35px}
+  .hero-grid{grid-template-columns:minmax(0,1fr) minmax(300px,.85fr);gap:30px}
+  .hero h1{font-size:clamp(2.65rem,5.2vw,3.5rem)}
+  .profile-photo{height:370px}
+}
+@media(max-width:760px){
+  .hero{padding:112px 0 28px;min-height:0}
+  .hero-grid{grid-template-columns:1fr;gap:28px}
+  .hero h1{max-width:15ch;font-size:clamp(2.35rem,8.8vw,3.25rem);line-height:1.08}
+  .hero-copy{font-size:.97rem}
+  .hero-card{max-width:560px;justify-self:center;padding:16px}
+  .profile-photo{height:clamp(290px,82vw,390px)}
+  .hero-bottom{margin-top:24px;gap:14px}
+}
+@media(max-width:420px){
+  .hero h1{font-size:clamp(2.2rem,9.2vw,2.65rem)}
+  .hero-card{padding:12px}
+  .profile-photo{height:300px}
+  .metric{padding:9px 4px}
+  .metric strong{font-size:1.12rem}
+  .metric span{font-size:.62rem}
+  .hero-bottom{font-size:.54rem;letter-spacing:.06em}
+}
