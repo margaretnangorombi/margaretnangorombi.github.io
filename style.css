@@ -15,3 +15,10 @@ footer{padding:26px 0;color:var(--muted);font-size:.8rem}.footer-inner{display:f
 @media(max-width:650px){body{font-size:15px}.nav-inner{height:68px}.nav-links{top:68px}.hero{padding:112px 0 52px}.hero-grid{gap:28px}h1{font-size:clamp(2.35rem,10vw,3.25rem);line-height:1.06}.hero-copy{font-size:.98rem}.profile-photo{height:300px}.metric-strip{gap:6px}.metric{padding:10px 5px}.metric strong{font-size:1.1rem}.metric span{font-size:.65rem}.hero-bottom{font-size:.61rem;letter-spacing:.08em;gap:15px}.hero-bottom span:last-child{text-align:right}section{padding:68px 0}.section-head{display:block}.section-head>p{margin-top:13px}.project-grid,.skills,.contribution-grid{grid-template-columns:1fr}.project-visual{height:190px}.project-body{padding:19px}.about-panel{padding:22px}.about-panel .about-lead{font-size:1.02rem}.stats{gap:8px}.stat{padding:13px}.timeline-item{grid-template-columns:1fr;gap:4px;padding-left:42px;margin-bottom:28px}.timeline-item .date{grid-row:auto}.timeline-item>div{grid-column:1}.contact-grid{gap:25px}.contact-card{padding:18px}.contact-row{display:block}.contact-row strong,.contact-row a{display:block;text-align:left}.contact-row a{margin-top:4px}.footer-inner{display:flex;flex-direction:column;align-items:flex-start;gap:7px}}
 @media(max-width:380px){.metric span{font-size:.6rem}.metric strong{font-size:1rem}.hero-bottom{font-size:.55rem}.stats{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}*,*:before,*:after{animation:none!important;transition-duration:.01ms!important}}
+
+.detail-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:22px;align-items:start}
+.detail-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:27px}
+.detail-card h2{font-size:1.5rem;margin:10px 0 14px}
+.detail-card p{color:var(--muted);font-size:.96rem;line-height:1.8;margin-top:10px}
+.callout{padding:17px;border-left:3px solid var(--accent);background:rgba(73,214,168,.07);border-radius:9px;margin-top:20px;color:#dce9f5;font-size:.9rem}
+@media(max-width:900px){.detail-grid{grid-template-columns:1fr}}
