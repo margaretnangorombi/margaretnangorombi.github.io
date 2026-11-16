@@ -7,7 +7,7 @@ Professional portfolio covering research, monitoring and evaluation, data analys
 - `style.css` — responsive visual design
 - `script.js` — mobile navigation, case-study filters and current footer year
 - `margaret-profile.jpg` — profile photograph
-- `Margaret-Nangorombi-Mwangi-CV.pdf` — curriculum vitae
+- `Margaret-Nangorombi-Mwangi-CV..pdf` — curriculum vitae
 
 ## Run locally
 Open `index.html` in a browser. No build step or package installation is required.
